@@ -69,6 +69,15 @@
                   (el "option" (list (attr :value "business")) (list (txt "Business · $99/mo")))
                 ))
               ))
+              (el "div" (list (attr :class "field")) (list
+                (el "label" (list (attr :for "signup-interval")) (list
+                  (txt "Billing")
+                ))
+                (el "select" (list (attr :id "signup-interval") (attr :name "interval") (attr :style "width:100%;padding:12px;border:1px solid var(--line);background:var(--bg);color:var(--text)")) (list
+                  (el "option" (list (attr :value "monthly")) (list (txt "Monthly")))
+                  (el "option" (list (attr :value "annual")) (list (txt "Annual · 2 months free")))
+                ))
+              ))
               (el "div" (list (attr :class "auth-actions")) (list
                 (el "button" (list (attr :class "btn primary") (attr :type "submit")) (list
                   (txt "Start 7-day trial ")

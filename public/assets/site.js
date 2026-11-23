@@ -63,6 +63,7 @@
       event.preventDefault();
       const email = signup.querySelector("#signup-email")?.value.trim() || "";
       const plan = signup.querySelector("#signup-plan")?.value || "starter";
+      const interval = signup.querySelector("#signup-interval")?.value === "annual" ? "annual" : "monthly";
       const status = signup.querySelector("#signup-status");
       const button = signup.querySelector("button[type=submit]");
       if (!email) return setStatus(status, "Enter the email you want to use.", "error");
@@ -72,7 +73,7 @@
         const response = await fetch(`${api}/v1/checkout`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ email, plan }),
+          body: JSON.stringify({ email, plan, interval }),
         });
         const value = await response.json().catch(() => ({}));
         if (!response.ok || !value.url) throw new Error(value.error || "Checkout is not available yet.");
