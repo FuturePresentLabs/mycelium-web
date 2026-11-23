@@ -59,6 +59,21 @@
 
   const signup = document.querySelector("#hosted-signup");
   if (signup) {
+    const readiness = async () => {
+      const status = signup.querySelector("#signup-status");
+      const button = signup.querySelector("button[type=submit]");
+      try {
+        const response = await fetch(`${api}/v1/status`);
+        const value = await response.json();
+        if (!value.checkout_ready) {
+          if (button) { button.disabled = true; button.textContent = "Checkout opens soon"; }
+          setStatus(status, "Hosted checkout is being configured. Email hello@fpl.dev to start now.");
+        }
+      } catch {
+        // Leave checkout enabled; the submit path reports the real error.
+      }
+    };
+    readiness();
     signup.addEventListener("submit", async (event) => {
       event.preventDefault();
       const email = signup.querySelector("#signup-email")?.value.trim() || "";
