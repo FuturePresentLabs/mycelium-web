@@ -563,7 +563,7 @@
               ))
             ))
             (el "p" (list (attr :class "lede")) (list
-              (txt "The core stays free forever. Paid plans add a managed workspace, shared computers, team controls, and support. Bring your own model keys and hardware whenever you like.")
+              (txt "The core stays free forever. Paid plans add a managed desktop, shared controls, always-on runners, and support. Bring your own model keys and hardware whenever you like.")
             ))
           ))
           (el "div" (list (attr :class "pricing-grid reveal")) (list
@@ -585,14 +585,14 @@
                 (txt "7-day trial · cancel anytime")
               ))
               (el "p" (list (attr :class "plan-copy")) (list
-                (txt "For one operator who wants the hosted workspace without the server.")
+                (txt "For one operator who wants the hosted desktop without the server.")
               ))
               (el "ul" nil (list
                 (el "li" nil (list
                   (txt "1 human · 3 agents")
                 ))
                 (el "li" nil (list
-                  (txt "1 hosted computer")
+                  (txt "1 hosted desktop · m.fpl.dev")
                 ))
                 (el "li" nil (list
                   (txt "10 GB workspace storage")
@@ -636,7 +636,7 @@
                   (txt "5 humans · 15 agents")
                 ))
                 (el "li" nil (list
-                  (txt "3 hosted computers")
+                  (txt "Shared hosted desktop")
                 ))
                 (el "li" nil (list
                   (txt "50 GB workspace storage")
@@ -645,7 +645,7 @@
                   (txt "Shared routines and approvals")
                 ))
                 (el "li" nil (list
-                  (txt "Passkeys, roles, and invites")
+                  (txt "Magic-link sign-in, roles, and invites")
                 ))
                 (el "li" nil (list
                   (txt "Priority email support")
@@ -680,7 +680,7 @@
                   (txt "15 humans · 50 agents")
                 ))
                 (el "li" nil (list
-                  (txt "10 hosted computers")
+                  (txt "Hosted desktop + 1 always-on runner")
                 ))
                 (el "li" nil (list
                   (txt "200 GB workspace storage")
@@ -705,7 +705,10 @@
               (txt "Annual billing: 2 months free")
             ))
             (el "span" nil (list
-              (txt "Extra humans, agents, and computers available")
+              (txt "Always-on add-on: $25/mo small · $49/mo default")
+            ))
+            (el "span" nil (list
+              (txt "Extra humans, agents, and storage available")
             ))
             (el "span" nil (list
               (txt "Enterprise from $1,000/mo")

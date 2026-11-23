@@ -17,7 +17,7 @@
             (txt "Start with what you have.")
           ))
           (el "p" (list (attr :class "lede")) (list
-            (txt "The open-source project is ready now. Hosted workspaces are opening in phases, with passkeys and Stripe billing rolling out to the first teams.")
+            (txt "The open-source project is ready now. Hosted desktops are opening in phases, with Stripe billing and magic-link sign-in rolling out to the first teams.")
           ))
         ))
       ))
@@ -50,7 +50,7 @@
               (txt "We run the pager.")
             ))
             (el "p" nil (list
-              (txt "Join the first hosted teams. We will provision your workspace, help connect the important tools, and set up billing when you are ready to keep it.")
+              (txt "Join the first hosted teams. We will provision your desktop at m.fpl.dev, help connect the important tools, and set up billing when you are ready to keep it.")
             ))
             (el "form" (list (attr :action "mailto:hello@fpl.dev?subject=Mycelium%20hosted%20early%20access") (attr :method "post") (attr :enctype "text/plain") (attr :style "margin-top:18px")) (list
               (el "div" (list (attr :class "field")) (list
@@ -106,7 +106,7 @@
                 (txt "Stripe when you are ready")
               ))
               (el "p" nil (list
-                (txt "Start the hosted workspace first. Pick a plan and add payment details when the team is in.")
+                (txt "Pick a plan and add payment details to start the 7-day trial. Cancel anytime.")
               ))
             ))
             (el "article" (list (attr :class "feature")) (list

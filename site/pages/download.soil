@@ -177,7 +177,7 @@
                 (txt "We can host it for you.")
               ))
               (el "p" (list (attr :class "lede") (attr :style "margin-bottom:20px")) (list
-                (txt "Hosted Mycelium gives you the same workspace with managed uptime, shared computers, passkeys, and a team that gets paged before you do.")
+                (txt "Hosted Mycelium gives you the same desktop with managed uptime, a custom domain, magic-link sign-in, and a team that gets paged before you do.")
               ))
               (el "div" (list (attr :class "hero-actions")) (list
                 (el "a" (list (attr :class "btn primary") (attr :href "/pricing")) (list
@@ -199,7 +199,7 @@
                 (txt "Passkeys and team invitations")
               ))
               (el "li" nil (list
-                (txt "Included hosted computers and storage")
+                (txt "Included hosted desktop and storage")
               ))
               (el "li" nil (list
                 (txt "Export and leave whenever you want")

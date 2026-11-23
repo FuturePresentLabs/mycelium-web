@@ -5,7 +5,7 @@
   (println
     (page
       "Pricing — Mycelium"
-      "Open source forever. Hosted plans from $15/month for a managed Mycelium workspace, with teams, agents, hosted computers, and enterprise SLA."
+      "Open source forever. Hosted plans from $15/month for a managed Mycelium desktop, with teams, agents, always-on runners, and enterprise SLA."
       "https://mycelium.fpl.dev/pricing"
       (list
       (el "section" (list (attr :class "page-hero")) (list
@@ -17,7 +17,7 @@
             (txt "Open source forever. Hosted when you need it.")
           ))
           (el "p" (list (attr :class "lede")) (list
-            (txt "The core is free to run anywhere. Paid plans sell the boring, important parts: a workspace that stays up, shared computers, team controls, and someone to call when it matters.")
+            (txt "The core is free to run anywhere. Paid plans sell the boring, important parts: a desktop that stays up, a custom domain, team controls, and someone to call when it matters.")
           ))
           (el "div" (list (attr :style "display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:24px")) (list
             (el "div" (list (attr :class "billing-toggle") (attr :role "group") (attr :aria-label "Billing period")) (list
@@ -55,17 +55,23 @@
                 (txt "billed monthly")
               ))
               (el "p" (list (attr :class "plan-copy")) (list
-                (txt "For one operator who wants the hosted workspace without the server.")
+                (txt "For one operator who wants the hosted desktop without the server.")
               ))
               (el "ul" nil (list
                 (el "li" nil (list
                   (txt "1 human · 3 agents")
                 ))
                 (el "li" nil (list
-                  (txt "1 hosted computer")
+                  (txt "1 hosted desktop · m.fpl.dev")
                 ))
                 (el "li" nil (list
                   (txt "10 GB workspace storage")
+                ))
+                (el "li" nil (list
+                  (txt "Custom domain")
+                ))
+                (el "li" nil (list
+                  (txt "Always-on runners available as an add-on")
                 ))
                 (el "li" nil (list
                   (txt "BYO model keys or credits")
@@ -106,16 +112,19 @@
                   (txt "5 humans · 15 agents")
                 ))
                 (el "li" nil (list
-                  (txt "3 hosted computers")
+                  (txt "Shared hosted desktop")
                 ))
                 (el "li" nil (list
                   (txt "50 GB workspace storage")
                 ))
                 (el "li" nil (list
+                  (txt "Custom domain")
+                ))
+                (el "li" nil (list
                   (txt "Shared routines and approvals")
                 ))
                 (el "li" nil (list
-                  (txt "Passkeys, roles, and invites")
+                  (txt "Magic-link sign-in, roles, and invites")
                 ))
                 (el "li" nil (list
                   (txt "Priority email support")
@@ -150,10 +159,13 @@
                   (txt "15 humans · 50 agents")
                 ))
                 (el "li" nil (list
-                  (txt "10 hosted computers")
+                  (txt "Hosted desktop + 1 always-on runner")
                 ))
                 (el "li" nil (list
                   (txt "200 GB workspace storage")
+                ))
+                (el "li" nil (list
+                  (txt "Custom domain")
                 ))
                 (el "li" nil (list
                   (txt "Audit log and advanced roles")
@@ -172,10 +184,13 @@
           ))
           (el "div" (list (attr :class "pricing-note")) (list
             (el "span" nil (list
-              (txt "Annual billing: 2 months free")
+              (txt "Annual billing: 2 months free · custom domains on paid plans")
             ))
             (el "span" nil (list
-              (txt "Extra humans, agents, and computers available")
+              (txt "Always-on add-on: $25/mo small · $49/mo default")
+            ))
+            (el "span" nil (list
+              (txt "Extra humans, agents, and storage available")
             ))
             (el "span" nil (list
               (txt "Enterprise from $1,000/mo")
@@ -273,19 +288,53 @@
                 ))
                 (el "tr" nil (list
                   (el "td" nil (list
-                    (txt "Hosted computers")
+                    (txt "Hosted desktop")
                   ))
                   (el "td" nil (list
                     (txt "1")
                   ))
                   (el "td" nil (list
-                    (txt "3")
+                    (txt "Shared")
                   ))
                   (el "td" nil (list
-                    (txt "10")
+                    (txt "1 + runner")
                   ))
                   (el "td" nil (list
                     (txt "Dedicated")
+                  ))
+                ))
+                (el "tr" nil (list
+                  (el "td" nil (list
+                    (txt "Always-on runner")
+                  ))
+                  (el "td" nil (list
+                    (txt "Add-on")
+                  ))
+                  (el "td" nil (list
+                    (txt "Add-on")
+                  ))
+                  (el "td" nil (list
+                    (txt "1 small included")
+                  ))
+                  (el "td" nil (list
+                    (txt "Dedicated")
+                  ))
+                ))
+                (el "tr" nil (list
+                  (el "td" nil (list
+                    (txt "Custom domain")
+                  ))
+                  (el "td" nil (list
+                    (txt "✓")
+                  ))
+                  (el "td" nil (list
+                    (txt "✓")
+                  ))
+                  (el "td" nil (list
+                    (txt "✓")
+                  ))
+                  (el "td" nil (list
+                    (txt "✓")
                   ))
                 ))
                 (el "tr" nil (list
@@ -307,7 +356,7 @@
                 ))
                 (el "tr" nil (list
                   (el "td" nil (list
-                    (txt "Passkeys")
+                    (txt "Sign-in")
                   ))
                   (el "td" nil (list
                     (txt "✓")
@@ -319,7 +368,7 @@
                     (txt "✓")
                   ))
                   (el "td" nil (list
-                    (txt "✓ + SSO / SCIM")
+                    (txt "Magic link + SSO / SCIM")
                   ))
                 ))
                 (el "tr" nil (list
@@ -424,7 +473,7 @@
                 (txt "Compute")
               ))
               (el "p" nil (list
-                (txt "Hosted computers run the agents and apps. Bring your own hardware, or use our managed compute with included hours.")
+                (txt "Hosted desktops run in your browser. Always-on runners keep agents and apps alive when you close the tab. Bring your own hardware, or use ours.")
               ))
             ))
           ))
@@ -454,7 +503,7 @@
                 (txt "Do I need a credit card for the trial?")
               ))
               (el "p" nil (list
-                (txt "No card for the 7-day hosted trial. We ask for payment details when you choose a plan. Self-hosting never requires payment.")
+                (txt "Yes. Add a card to start the 7-day hosted trial. Cancel anytime. Self-hosting never requires payment.")
               ))
             ))
             (el "details" nil (list

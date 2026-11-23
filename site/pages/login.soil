@@ -34,7 +34,7 @@
               (txt "Open your workspace.")
             ))
             (el "p" (list (attr :class "lede")) (list
-              (txt "Hosted workspaces are opening in phases. If your workspace is ready, use the passkey link in your invitation.")
+              (txt "Hosted desktops are opening in phases. If your desktop is ready, use the sign-in link we emailed you.")
             ))
             (el "form" (list (attr :action "mailto:hello@fpl.dev?subject=Mycelium%20workspace%20access") (attr :method "post") (attr :enctype "text/plain")) (list
               (el "div" (list (attr :class "field")) (list
@@ -61,9 +61,9 @@
               ))
               (el "div" nil (list
                 (el "b" nil (list
-                  (txt "Passkey-first.")
+                  (txt "Magic-link first.")
                 ))
-                (txt " When your workspace is provisioned, sign-in happens on this device. No password to rotate, no shared secret to leak.")
+                (txt " When your desktop is provisioned, sign-in happens from a one-time link. Passkeys arrive next, after the first hosted cohort.")
               ))
             ))
             (el "p" (list (attr :class "auth-small")) (list
