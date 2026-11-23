@@ -1,0 +1,83 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/login.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Sign in — Mycelium"
+      "Sign in to a hosted Mycelium workspace with a passkey. Hosted access is opening in phases."
+      "https://mycelium.fpl.dev/login"
+      (list
+      (el "section" (list (attr :class "auth-shell")) (list
+        (el "div" (list (attr :class "auth-side")) (list
+          (el "div" nil (list
+            (el "p" (list (attr :class "eyebrow light")) (list
+              (txt "Hosted Mycelium")
+            ))
+            (el "h2" nil (list
+              (txt "Welcome back to the operating picture.")
+            ))
+            (el "p" nil (list
+              (txt "Passkeys are the fast path. Magic links are the recovery path. Your workspace stays yours.")
+            ))
+          ))
+          (el "p" (list (attr :class "mono") (attr :style "font-size:10px;color:rgba(255,255,255,.42)")) (list
+            (txt "MYCELIUM.FPL.DEV / SIGN IN")
+          ))
+        ))
+        (el "div" (list (attr :class "auth-main")) (list
+          (el "div" (list (attr :class "auth-card")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "Sign in")
+            ))
+            (el "h1" nil (list
+              (txt "Open your workspace.")
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "Hosted workspaces are opening in phases. If your workspace is ready, use the passkey link in your invitation.")
+            ))
+            (el "form" (list (attr :action "mailto:hello@fpl.dev?subject=Mycelium%20workspace%20access") (attr :method "post") (attr :enctype "text/plain")) (list
+              (el "div" (list (attr :class "field")) (list
+                (el "label" (list (attr :for "login-email")) (list
+                  (txt "Work email")
+                ))
+                (el "input" (list (attr :id "login-email") (attr :name "email") (attr :type "email") (attr :autocomplete "email") (attr :placeholder "you@company.com") (attr :required #t)) nil)
+              ))
+              (el "div" (list (attr :class "auth-actions")) (list
+                (el "button" (list (attr :class "btn primary") (attr :type "submit")) (list
+                  (txt "Request an access link ")
+                  (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                    (txt "→")
+                  ))
+                ))
+                (el "a" (list (attr :class "btn") (attr :href "/download")) (list
+                  (txt "Self-host instead")
+                ))
+              ))
+            ))
+            (el "div" (list (attr :class "passkey-note") (attr :style "margin-top:18px")) (list
+              (el "span" (list (attr :aria-hidden "true")) (list
+                (txt "✦")
+              ))
+              (el "div" nil (list
+                (el "b" nil (list
+                  (txt "Passkey-first.")
+                ))
+                (txt " When your workspace is provisioned, sign-in happens on this device. No password to rotate, no shared secret to leak.")
+              ))
+            ))
+            (el "p" (list (attr :class "auth-small")) (list
+              (txt "Need a new workspace? ")
+              (el "a" (list (attr :href "/signup")) (list
+                (txt "Start here")
+              ))
+              (txt ". Trouble signing in? ")
+              (el "a" (list (attr :href "mailto:hello@fpl.dev")) (list
+                (txt "hello@fpl.dev")
+              ))
+              (txt ".")
+            ))
+          ))
+        ))
+      ))
+      ))))

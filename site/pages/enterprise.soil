@@ -1,0 +1,200 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/enterprise.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Enterprise — Mycelium"
+      "Private deployment, dedicated infrastructure, SSO, audit trails, and a named support path for teams that cannot wait for uptime."
+      "https://mycelium.fpl.dev/enterprise"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "Enterprise")
+          ))
+          (el "h1" nil (list
+            (txt "When the business cannot wait.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "Mycelium Enterprise is for teams that want the agent-native workspace without outsourcing the trust boundary. Private deployment, dedicated infrastructure, and a support path with names on it.")
+          ))
+          (el "div" (list (attr :class "hero-actions")) (list
+            (el "a" (list (attr :class "btn primary") (attr :href "mailto:hello@fpl.dev?subject=Mycelium%20Enterprise")) (list
+              (txt "Talk to us ")
+              (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                (txt "→")
+              ))
+            ))
+            (el "a" (list (attr :class "btn") (attr :href "/security")) (list
+              (txt "Security & trust")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section") (attr :style "padding-top:20px")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "three reveal")) (list
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "01")
+              ))
+              (el "h3" nil (list
+                (txt "Private by default")
+              ))
+              (el "p" nil (list
+                (txt "Single-tenant deployment on FPL Cloud or your own infrastructure. Your network boundary, your keys, your data.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "02")
+              ))
+              (el "h3" nil (list
+                (txt "Operational trust")
+              ))
+              (el "p" nil (list
+                (txt "99.95% uptime SLA, incident response, audit export, SSO / SCIM, and a named support path.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "03")
+              ))
+              (el "h3" nil (list
+                (txt "Real migration")
+              ))
+              (el "p" nil (list
+                (txt "We help map the first workflows, connect the important tools, and get the team onto the workspace without a six-month program.")
+              ))
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "section-head reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "What you get")
+              ))
+              (el "h2" nil (list
+                (txt "The boring parts, handled.")
+              ))
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "Enterprise is less about a bigger plan card and more about a defined operating relationship.")
+            ))
+          ))
+          (el "div" (list (attr :class "plan-table-wrap reveal")) (list
+            (el "table" (list (attr :class "plan-table")) (list
+              (el "thead" nil (list
+                (el "tr" nil (list
+                  (el "th" nil (list
+                    (txt "Area")
+                  ))
+                  (el "th" nil (list
+                    (txt "Enterprise")
+                  ))
+                ))
+              ))
+              (el "tbody" nil (list
+                (el "tr" nil (list
+                  (el "td" nil (list
+                    (txt "Deployment")
+                  ))
+                  (el "td" nil (list
+                    (txt "Dedicated or private-cloud Mycelium workspace")
+                  ))
+                ))
+                (el "tr" nil (list
+                  (el "td" nil (list
+                    (txt "Identity")
+                  ))
+                  (el "td" nil (list
+                    (txt "SSO, SCIM, role mapping, audit export")
+                  ))
+                ))
+                (el "tr" nil (list
+                  (el "td" nil (list
+                    (txt "Uptime")
+                  ))
+                  (el "td" nil (list
+                    (txt "99.95% SLA with service credits")
+                  ))
+                ))
+                (el "tr" nil (list
+                  (el "td" nil (list
+                    (txt "Support")
+                  ))
+                  (el "td" nil (list
+                    (txt "Named support path, incident response, architecture review")
+                  ))
+                ))
+                (el "tr" nil (list
+                  (el "td" nil (list
+                    (txt "Security")
+                  ))
+                  (el "td" nil (list
+                    (txt "DPA, subprocessor review, security questionnaire support")
+                  ))
+                ))
+                (el "tr" nil (list
+                  (el "td" nil (list
+                    (txt "Commercial")
+                  ))
+                  (el "td" nil (list
+                    (txt "Annual agreement, invoicing, procurement support")
+                  ))
+                ))
+              ))
+            ))
+          ))
+          (el "p" (list (attr :class "note reveal") (attr :style "margin-top:18px")) (list
+            (txt "Pricing starts at $1,000/month for a dedicated deployment. Final pricing depends on infrastructure, seats, and support scope. We will quote before you commit.")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "enterprise reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Start the conversation")
+              ))
+              (el "h2" nil (list
+                (txt "Tell us what has to stay up.")
+              ))
+              (el "p" (list (attr :class "lede") (attr :style "margin-bottom:20px")) (list
+                (txt "Send a sentence about the business, the team size, and the systems that cannot go down. We will reply with a real plan.")
+              ))
+              (el "div" (list (attr :class "hero-actions")) (list
+                (el "a" (list (attr :class "btn primary") (attr :href "mailto:hello@fpl.dev?subject=Mycelium%20Enterprise")) (list
+                  (txt "hello@fpl.dev ")
+                  (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                    (txt "→")
+                  ))
+                ))
+                (el "a" (list (attr :class "btn") (attr :href "https://fpl.dev/cloud/contact/")) (list
+                  (txt "FPL Cloud contact")
+                ))
+              ))
+            ))
+            (el "ul" (list (attr :class "enterprise-list")) (list
+              (el "li" nil (list
+                (txt "Response within one business day")
+              ))
+              (el "li" nil (list
+                (txt "Architecture and security review")
+              ))
+              (el "li" nil (list
+                (txt "Pilot scope before contract")
+              ))
+              (el "li" nil (list
+                (txt "Procurement and DPA support")
+              ))
+            ))
+          ))
+        ))
+      ))
+      ))))

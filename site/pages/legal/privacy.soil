@@ -1,0 +1,73 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/legal/privacy.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Privacy — Mycelium"
+      "How Mycelium handles account, billing, support, and workspace data."
+      "https://mycelium.fpl.dev/legal/privacy"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "Legal")
+          ))
+          (el "h1" nil (list
+            (txt "Privacy.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "A plain-language summary of what the Mycelium website and hosted service collect, why, and how to get your data out.")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "legal")) (list
+            (el "h2" nil (list
+              (txt "What this policy covers")
+            ))
+            (el "p" nil (list
+              (txt "This policy covers the Mycelium website at mycelium.fpl.dev and the hosted Mycelium service operated by Future Present Labs LLC. Self-hosted installations are operated by you; your own policies apply.")
+            ))
+            (el "h2" nil (list
+              (txt "What we collect")
+            ))
+            (el "p" nil (list
+              (txt "Account details (name, email, organization), authentication events, billing records, support messages, and product usage needed to run the service. We do not train models on customer workspace data.")
+            ))
+            (el "h2" nil (list
+              (txt "What we do not do")
+            ))
+            (el "p" nil (list
+              (txt "We do not sell personal data. We do not use workspace content for advertising. We do not claim a certification we have not earned.")
+            ))
+            (el "h2" nil (list
+              (txt "Processors")
+            ))
+            (el "p" nil (list
+              (txt "We use infrastructure and payment processors to operate the service, including Cloudflare and Stripe. Enterprise customers can review the current subprocessor list under a DPA.")
+            ))
+            (el "h2" nil (list
+              (txt "Your choices")
+            ))
+            (el "p" nil (list
+              (txt "You can request access, correction, export, or deletion by emailing ")
+              (el "a" (list (attr :href "mailto:privacy@fpl.dev") (attr :style "color:var(--violet-2)")) (list
+                (txt "privacy@fpl.dev")
+              ))
+              (txt ". Hosted workspaces have an export window after cancellation.")
+            ))
+            (el "h2" nil (list
+              (txt "Contact")
+            ))
+            (el "p" nil (list
+              (txt "Future Present Labs LLC · privacy@fpl.dev")
+            ))
+            (el "p" (list (attr :class "note")) (list
+              (txt "This is a working draft for the launch site, not a substitute for counsel-reviewed terms. Replace before taking payment.")
+            ))
+          ))
+        ))
+      ))
+      ))))

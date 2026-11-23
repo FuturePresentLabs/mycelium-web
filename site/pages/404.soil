@@ -1,0 +1,32 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/404.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Not found — Mycelium"
+      "That page is not part of the Mycelium workspace."
+      "https://mycelium.fpl.dev/404"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "404")
+          ))
+          (el "h1" nil (list
+            (txt "This path has not grown yet.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "The page you were looking for is not here. Try the product, the pricing, or the source.")
+          ))
+          (el "div" (list (attr :class "hero-actions")) (list
+            (el "a" (list (attr :class "btn primary") (attr :href "/")) (list
+              (txt "Back to Mycelium")
+            ))
+            (el "a" (list (attr :class "btn") (attr :href "/download")) (list
+              (txt "Self-host")
+            ))
+          ))
+        ))
+      ))
+      ))))

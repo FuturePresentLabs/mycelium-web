@@ -1,0 +1,64 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/legal/dpa.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "DPA — Mycelium"
+      "Request the Mycelium data processing addendum for enterprise deployments."
+      "https://mycelium.fpl.dev/legal/dpa"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "Legal")
+          ))
+          (el "h1" nil (list
+            (txt "Data processing addendum.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "For enterprise customers who need a defined data boundary, subprocessor review, and a signed DPA before deployment.")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "legal")) (list
+            (el "h2" nil (list
+              (txt "Status")
+            ))
+            (el "p" nil (list
+              (txt "The launch site publishes this summary as a placeholder. A counsel-reviewed DPA is available on request for Enterprise customers.")
+            ))
+            (el "h2" nil (list
+              (txt "Scope")
+            ))
+            (el "p" nil (list
+              (txt "The DPA will cover the hosted Mycelium service, the categories of personal data processed, the purpose of processing, retention, security measures, subprocessors, and the customer's instructions.")
+            ))
+            (el "h2" nil (list
+              (txt "Data location")
+            ))
+            (el "p" nil (list
+              (txt "Hosted workspaces run on FPL Cloud infrastructure. Enterprise customers can request a dedicated deployment and a specific data boundary.")
+            ))
+            (el "h2" nil (list
+              (txt "Subprocessors")
+            ))
+            (el "p" nil (list
+              (txt "Current infrastructure and payment providers include Cloudflare and Stripe. The signed DPA will list the current subprocessors and the notice period for changes.")
+            ))
+            (el "h2" nil (list
+              (txt "Request a copy")
+            ))
+            (el "p" nil (list
+              (txt "Email ")
+              (el "a" (list (attr :href "mailto:legal@fpl.dev") (attr :style "color:var(--violet-2)")) (list
+                (txt "legal@fpl.dev")
+              ))
+              (txt " with the subject “Mycelium DPA”.")
+            ))
+          ))
+        ))
+      ))
+      ))))

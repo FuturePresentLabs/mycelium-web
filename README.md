@@ -16,8 +16,9 @@ access by email.
 
 ## Intended shape
 
-- Static marketing site: home, pricing, download/self-host, integrations,
-  security, enterprise, docs.
+- Static marketing site generated from **Soil** source under `site/pages/`:
+  home, pricing, download/self-host, integrations, security, enterprise, docs.
+  CSS and progressive-enhancement JS remain static assets.
 - Hosted product entry points: `/login`, `/signup`, `/app`, `/billing`.
 - Commerce: Stripe Checkout + Customer Portal for recurring plans.
 - Auth: passkey-first customer accounts, FPL SSO for staff, enterprise SSO later.
@@ -34,8 +35,8 @@ The Worker name is `mycelium-landing`, and the route is
 `mycelium.fpl.dev/*` on the `fpl.dev` zone. Assets are served from `./public`.
 
 ```sh
-python3 scripts/render-pages.py   # regenerate inner pages from the shared shell
-wrangler deploy                   # deploy to Cloudflare Workers
+SOIL_LANG=/path/to/soil-lang site/build.sh   # regenerate HTML from Soil
+wrangler deploy                              # deploy to Cloudflare Workers
 ```
 
 Preview: <https://mycelium-landing.ajmwagar.workers.dev>

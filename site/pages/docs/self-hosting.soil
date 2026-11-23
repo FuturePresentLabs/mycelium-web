@@ -1,0 +1,191 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/docs/self-hosting.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Self-hosting guide — Mycelium"
+      "Install Mycelium on a laptop or server, connect a model, and run a persistent workspace with TLS, backups, and updates."
+      "https://mycelium.fpl.dev/docs/self-hosting"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "Docs / Self-hosting")
+          ))
+          (el "h1" nil (list
+            (txt "Get a server running.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "This is the short path. The full documentation lives in the Mycelium repository. For production, read the server notes before exposing the workspace to the internet.")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section") (attr :style "padding-top:20px")) (list
+        (el "div" (list (attr :class "wrap page-grid")) (list
+          (el "article" (list (attr :class "panel") (attr :id "laptop")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "01 / Laptop")
+            ))
+            (el "h2" nil (list
+              (txt "Evaluate locally.")
+            ))
+            (el "p" nil (list
+              (txt "Use this path to kick the tires. It installs the core binaries, enrolls the host, and prompts for optional pieces.")
+            ))
+            (el "div" (list (attr :class "code-block")) (list
+              (el "span" (list (attr :class "c")) (list
+                (txt "# macOS or Linux")
+              ))
+              (el "br" nil nil)
+              (el "span" (list (attr :class "g")) (list
+                (txt "curl")
+              ))
+              (txt " --proto '=https' --tlsv1.2 -fsS \\")
+              (el "br" nil nil)
+              (txt "  https://raw.githubusercontent.com/mycelium-linux/mycelium/master/install.sh | bash")
+            ))
+            (el "p" nil (list
+              (txt "Then run ")
+              (el "code" (list (attr :class "mono")) (list
+                (txt "mycelium doctor")
+              ))
+              (txt " and follow the prompts. You can re-run the installer safely.")
+            ))
+          ))
+          (el "article" (list (attr :class "panel") (attr :id "server")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "02 / Server")
+            ))
+            (el "h2" nil (list
+              (txt "Make it persistent.")
+            ))
+            (el "p" nil (list
+              (txt "Use a Linux host with systemd. Put a reverse proxy in front of the Mycelium frontdoor, terminate TLS, and back up the workspace volume and database.")
+            ))
+            (el "ul" (list (attr :class "checklist")) (list
+              (el "li" nil (list
+                (txt "Ubuntu 24.04 or a current systemd distribution")
+              ))
+              (el "li" nil (list
+                (txt "4 vCPU, 8 GB RAM, 100 GB SSD")
+              ))
+              (el "li" nil (list
+                (txt "DNS record pointing at the host")
+              ))
+              (el "li" nil (list
+                (txt "Caddy, Traefik, or nginx for TLS")
+              ))
+              (el "li" nil (list
+                (txt "Object storage for larger file workspaces")
+              ))
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "section-head reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Server checklist")
+              ))
+              (el "h2" nil (list
+                (txt "Before you invite the team.")
+              ))
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "A workspace that holds the business should be boring to operate: TLS, backups, updates, and a way back in.")
+            ))
+          ))
+          (el "div" (list (attr :class "three reveal")) (list
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "01")
+              ))
+              (el "h3" nil (list
+                (txt "TLS and DNS")
+              ))
+              (el "p" nil (list
+                (txt "Point a hostname at the server, terminate TLS at the proxy, and redirect HTTP to HTTPS. Do not expose the daemon socket to the network.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "02")
+              ))
+              (el "h3" nil (list
+                (txt "Backups")
+              ))
+              (el "p" nil (list
+                (txt "Back up the workspace database, object storage, and configuration. Test a restore before you need one.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "03")
+              ))
+              (el "h3" nil (list
+                (txt "Updates")
+              ))
+              (el "p" nil (list
+                (txt "Use the signed release channel and read the changelog. Re-run the installer or follow the package update path.")
+              ))
+            ))
+          ))
+          (el "p" (list (attr :class "note reveal") (attr :style "margin-top:18px")) (list
+            (txt "Need the complete commands, service units, and security notes? Use the repository docs: ")
+            (el "a" (list (attr :href "https://github.com/mycelium-linux/mycelium/tree/master/docs") (attr :style "color:var(--violet-2)")) (list
+              (txt "mycelium-linux/mycelium/docs")
+            ))
+            (txt ". For managed hosting, see ")
+            (el "a" (list (attr :href "/pricing") (attr :style "color:var(--violet-2)")) (list
+              (txt "Pricing")
+            ))
+            (txt ".")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "enterprise reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Stuck?")
+              ))
+              (el "h2" nil (list
+                (txt "We can help.")
+              ))
+              (el "p" (list (attr :class "lede") (attr :style "margin-bottom:20px")) (list
+                (txt "Self-hosting is free. If you want help with architecture, migration, or a private deployment, talk to us.")
+              ))
+              (el "div" (list (attr :class "hero-actions")) (list
+                (el "a" (list (attr :class "btn primary") (attr :href "/enterprise")) (list
+                  (txt "Enterprise support ")
+                  (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                    (txt "→")
+                  ))
+                ))
+                (el "a" (list (attr :class "btn") (attr :href "https://github.com/mycelium-linux/mycelium/issues")) (list
+                  (txt "Open an issue")
+                ))
+              ))
+            ))
+            (el "ul" (list (attr :class "enterprise-list")) (list
+              (el "li" nil (list
+                (txt "Install and upgrade review")
+              ))
+              (el "li" nil (list
+                (txt "Private cloud architecture")
+              ))
+              (el "li" nil (list
+                (txt "SSO and access model")
+              ))
+              (el "li" nil (list
+                (txt "Backup and recovery plan")
+              ))
+            ))
+          ))
+        ))
+      ))
+      ))))

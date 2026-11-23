@@ -1,0 +1,211 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/download.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Self-host Mycelium"
+      "Install Mycelium on macOS, Linux, a server, or your own cloud. Open source under MIT OR Apache-2.0. Bring your own models and hardware."
+      "https://mycelium.fpl.dev/download"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "Self-host")
+          ))
+          (el "h1" nil (list
+            (txt "Run it yourself. Keep the keys.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "Mycelium is open source. Install it on a laptop, a server, or your own cloud. There is no license key, no phone-home requirement, and no feature held back for the hosted plan.")
+          ))
+          (el "div" (list (attr :class "hero-actions")) (list
+            (el "a" (list (attr :class "btn primary") (attr :href "/docs/self-hosting")) (list
+              (txt "Read the install guide ")
+              (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                (txt "→")
+              ))
+            ))
+            (el "a" (list (attr :class "btn") (attr :href "https://github.com/mycelium-linux/mycelium")) (list
+              (txt "View the repository")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section") (attr :style "padding-top:20px")) (list
+        (el "div" (list (attr :class "wrap page-grid")) (list
+          (el "article" (list (attr :class "panel dark")) (list
+            (el "p" (list (attr :class "eyebrow light")) (list
+              (txt "Fast path")
+            ))
+            (el "h2" nil (list
+              (txt "One command.")
+            ))
+            (el "p" nil (list
+              (txt "The installer builds the core binaries, enrolls the host, and prompts for the optional pieces. It is safe to re-run.")
+            ))
+            (el "div" (list (attr :class "terminal") (attr :style "margin-top:18px")) (list
+              (el "div" (list (attr :class "terminal-top")) (list
+                (el "i" nil nil)
+                (el "i" nil nil)
+                (el "i" nil nil)
+                (el "span" nil (list
+                  (txt "bash")
+                ))
+              ))
+              (el "pre" nil (list
+                (el "span" (list (attr :class "prompt")) (list
+                  (txt "$")
+                ))
+                (txt " curl --proto '=https' --tlsv1.2 -fsS \\\n  https://raw.githubusercontent.com/mycelium-linux/mycelium/master/install.sh | bash")
+              ))
+            ))
+            (el "div" (list (attr :class "copy-line")) (list
+              (el "code" nil (list
+                (txt "curl --proto '=https' --tlsv1.2 -fsS https://raw.githubusercontent.com/mycelium-linux/mycelium/master/install.sh | bash")
+              ))
+              (el "button" (list (attr :type "button") (attr :data-copy "curl --proto '=https' --tlsv1.2 -fsS https://raw.githubusercontent.com/mycelium-linux/mycelium/master/install.sh | bash")) (list
+                (txt "Copy")
+              ))
+            ))
+          ))
+          (el "article" (list (attr :class "panel")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "What you need")
+            ))
+            (el "h2" nil (list
+              (txt "A machine and a little patience.")
+            ))
+            (el "ul" (list (attr :class "checklist")) (list
+              (el "li" nil (list
+                (txt "macOS or a systemd-based Linux distribution")
+              ))
+              (el "li" nil (list
+                (txt "4 vCPU, 8 GB RAM, 100 GB free disk for a comfortable server")
+              ))
+              (el "li" nil (list
+                (txt "A domain name if you want remote access and TLS")
+              ))
+              (el "li" nil (list
+                (txt "Optional: a model provider key, or a local OpenAI-compatible endpoint")
+              ))
+              (el "li" nil (list
+                (txt "Optional: object storage for larger file workspaces")
+              ))
+            ))
+            (el "p" (list (attr :class "note") (attr :style "margin-top:18px")) (list
+              (txt "For production, use the server guide. It covers TLS, reverse proxy, backups, and upgrades.")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "section-head reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Pick your shape")
+              ))
+              (el "h2" nil (list
+                (txt "Laptop, server, or image.")
+              ))
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "The same core. Different amounts of uptime and isolation.")
+            ))
+          ))
+          (el "div" (list (attr :class "three reveal")) (list
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "01")
+              ))
+              (el "h3" nil (list
+                (txt "On your machine")
+              ))
+              (el "p" nil (list
+                (txt "Try the workspace, connect a model, and keep everything local. Good for evaluation and personal use.")
+              ))
+              (el "div" (list (attr :style "margin-top:14px")) (list
+                (el "a" (list (attr :class "btn small") (attr :href "/docs/self-hosting#laptop")) (list
+                  (txt "Laptop guide")
+                ))
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "02")
+              ))
+              (el "h3" nil (list
+                (txt "On a server")
+              ))
+              (el "p" nil (list
+                (txt "Run a persistent workspace for a team with TLS, backups, and a reverse proxy. This is the recommended self-host path.")
+              ))
+              (el "div" (list (attr :style "margin-top:14px")) (list
+                (el "a" (list (attr :class "btn small") (attr :href "/docs/self-hosting#server")) (list
+                  (txt "Server guide")
+                ))
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "03")
+              ))
+              (el "h3" nil (list
+                (txt "fungOS image")
+              ))
+              (el "p" nil (list
+                (txt "Want the whole operating environment? Start with the fungOS distribution and bring Mycelium up as the control plane.")
+              ))
+              (el "div" (list (attr :style "margin-top:14px")) (list
+                (el "a" (list (attr :class "btn small") (attr :href "https://fungos.dev/")) (list
+                  (txt "Explore fungOS")
+                ))
+              ))
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "enterprise reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Rather not run the pager?")
+              ))
+              (el "h2" nil (list
+                (txt "We can host it for you.")
+              ))
+              (el "p" (list (attr :class "lede") (attr :style "margin-bottom:20px")) (list
+                (txt "Hosted Mycelium gives you the same workspace with managed uptime, shared computers, passkeys, and a team that gets paged before you do.")
+              ))
+              (el "div" (list (attr :class "hero-actions")) (list
+                (el "a" (list (attr :class "btn primary") (attr :href "/pricing")) (list
+                  (txt "See hosted plans ")
+                  (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                    (txt "→")
+                  ))
+                ))
+                (el "a" (list (attr :class "btn") (attr :href "/enterprise")) (list
+                  (txt "Talk to us")
+                ))
+              ))
+            ))
+            (el "ul" (list (attr :class "enterprise-list")) (list
+              (el "li" nil (list
+                (txt "Managed workspace on FPL Cloud")
+              ))
+              (el "li" nil (list
+                (txt "Passkeys and team invitations")
+              ))
+              (el "li" nil (list
+                (txt "Included hosted computers and storage")
+              ))
+              (el "li" nil (list
+                (txt "Export and leave whenever you want")
+              ))
+            ))
+          ))
+        ))
+      ))
+      ))))
