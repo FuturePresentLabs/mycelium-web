@@ -18,7 +18,7 @@
               (txt "Welcome back to the operating picture.")
             ))
             (el "p" nil (list
-              (txt "Magic links are the fast path. Passkeys follow. Your desktop stays yours.")
+              (txt "FPL Auth handles passkeys, recovery, and account security. Your desktop stays yours.")
             ))
           ))
           (el "p" (list (attr :class "mono") (attr :style "font-size:10px;color:rgba(255,255,255,.42)")) (list
@@ -36,25 +36,38 @@
             (el "p" (list (attr :class "lede")) (list
               (txt "Hosted desktops are opening in phases. If your desktop is ready, use the sign-in link we emailed you.")
             ))
-            (el "form" (list (attr :id "magic-login") (attr :novalidate #t)) (list
-              (el "div" (list (attr :class "field")) (list
-                (el "label" (list (attr :for "login-email")) (list
-                  (txt "Work email")
+            (el "div" (list (attr :class "auth-actions")) (list
+              (el "a" (list (attr :class "btn primary") (attr :href "https://m.fpl.dev/v1/auth/login")) (list
+                (txt "Continue with FPL Auth ")
+                (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                  (txt "→")
                 ))
-                (el "input" (list (attr :id "login-email") (attr :name "email") (attr :type "email") (attr :autocomplete "email") (attr :placeholder "you@company.com") (attr :required #t)) nil)
               ))
-              (el "div" (list (attr :class "auth-actions")) (list
-                (el "button" (list (attr :class "btn primary") (attr :type "submit")) (list
-                  (txt "Email me a sign-in link ")
-                  (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
-                    (txt "→")
+              (el "a" (list (attr :class "btn") (attr :href "/download")) (list
+                (txt "Self-host instead")
+              ))
+            ))
+            (el "details" (list (attr :style "margin-top:22px")) (list
+              (el "summary" (list (attr :class "auth-small") (attr :style "cursor:pointer")) (list
+                (txt "Using a customer email? Request a one-time link")
+              ))
+              (el "form" (list (attr :id "magic-login") (attr :novalidate #t) (attr :style "margin-top:14px")) (list
+                (el "div" (list (attr :class "field")) (list
+                  (el "label" (list (attr :for "login-email")) (list
+                    (txt "Work email")
+                  ))
+                  (el "input" (list (attr :id "login-email") (attr :name "email") (attr :type "email") (attr :autocomplete "email") (attr :placeholder "you@company.com") (attr :required #t)) nil)
+                ))
+                (el "div" (list (attr :class "auth-actions")) (list
+                  (el "button" (list (attr :class "btn") (attr :type "submit")) (list
+                    (txt "Email me a sign-in link ")
+                    (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                      (txt "→")
+                    ))
                   ))
                 ))
-                (el "a" (list (attr :class "btn") (attr :href "/download")) (list
-                  (txt "Self-host instead")
-                ))
+                (el "p" (list (attr :id "login-status") (attr :class "auth-small") (attr :role "status") (attr :aria-live "polite")) nil)
               ))
-              (el "p" (list (attr :id "login-status") (attr :class "auth-small") (attr :role "status") (attr :aria-live "polite")) nil)
             ))
             (el "div" (list (attr :class "passkey-note") (attr :style "margin-top:18px")) (list
               (el "span" (list (attr :aria-hidden "true")) (list
@@ -62,9 +75,9 @@
               ))
               (el "div" nil (list
                 (el "b" nil (list
-                  (txt "Magic-link first.")
+                  (txt "Passkey-first.")
                 ))
-                (txt " When your desktop is provisioned, sign-in happens from a one-time link. Passkeys arrive next, after the first hosted cohort.")
+                (txt " FPL Auth handles passkeys and recovery, then returns you to m.fpl.dev. The SSO launcher is bypassed for normal sign-in.")
               ))
             ))
             (el "p" (list (attr :class "auth-small")) (list
