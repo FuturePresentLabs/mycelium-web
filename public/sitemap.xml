@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mycelium.fpl.dev/</loc></url>
+  <url><loc>https://mycelium.fpl.dev/pricing</loc></url>
+  <url><loc>https://mycelium.fpl.dev/download</loc></url>
+  <url><loc>https://mycelium.fpl.dev/integrations</loc></url>
+  <url><loc>https://mycelium.fpl.dev/security</loc></url>
+  <url><loc>https://mycelium.fpl.dev/enterprise</loc></url>
+  <url><loc>https://mycelium.fpl.dev/login</loc></url>
+  <url><loc>https://mycelium.fpl.dev/signup</loc></url>
+  <url><loc>https://mycelium.fpl.dev/docs/self-hosting</loc></url>
+</urlset>

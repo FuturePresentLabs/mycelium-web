@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b0f37"/>
+      <stop offset=".55" stop-color="#2a145d"/>
+      <stop offset="1" stop-color="#4b2bd6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".75" cy=".15" r=".7">
+      <stop offset="0" stop-color="#c9f36b" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#c9f36b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity=".16" stroke="#f8f5ff" stroke-width="1">
+    <path d="M0 120h1200M0 240h1200M0 360h1200M0 480h1200M200 0v630M400 0v630M600 0v630M800 0v630M1000 0v630"/>
+  </g>
+  <g transform="translate(86 78)">
+    <g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round">
+      <path d="M32 29V10M25 32 10 20M39 32l15-12M25 40 10 52M39 40l15 12M32 43v19"/>
+      <circle cx="32" cy="32" r="7" fill="#fff" stroke="none"/>
+      <circle cx="32" cy="8" r="3" fill="#c9f36b" stroke="none"/>
+      <circle cx="8" cy="18" r="3" fill="#c9f36b" stroke="none"/>
+      <circle cx="56" cy="18" r="3" fill="#c9f36b" stroke="none"/>
+      <circle cx="8" cy="54" r="3" fill="#c9f36b" stroke="none"/>
+      <circle cx="56" cy="54" r="3" fill="#c9f36b" stroke="none"/>
+      <circle cx="32" cy="62" r="3" fill="#c9f36b" stroke="none"/>
+    </g>
+  </g>
+  <text x="172" y="126" fill="#f8f5ff" font-family="Georgia, serif" font-size="42" font-weight="700" letter-spacing="-1">Mycelium</text>
+  <text x="86" y="300" fill="#f8f5ff" font-family="Georgia, serif" font-size="88" font-weight="600" letter-spacing="-4">The business operating</text>
+  <text x="86" y="386" fill="#f8f5ff" font-family="Georgia, serif" font-size="88" font-weight="600" letter-spacing="-4">system that builds</text>
+  <text x="86" y="472" fill="#c9f36b" font-family="Georgia, serif" font-size="88" font-weight="600" letter-spacing="-4">itself around you.</text>
+  <text x="90" y="548" fill="#d8ccff" font-family="Menlo, monospace" font-size="18" letter-spacing="3">OPEN SOURCE  ·  SELF-HOSTED  ·  AGENT-NATIVE</text>
+  <text x="90" y="590" fill="#9b8cc4" font-family="Menlo, monospace" font-size="14" letter-spacing="2">MYCELIUM.FPL.DEV</text>
+</svg>

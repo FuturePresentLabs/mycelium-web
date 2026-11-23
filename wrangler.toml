@@ -1,0 +1,11 @@
+name = "mycelium-landing"
+compatibility_date = "2026-11-23"
+workers_dev = true
+
+routes = [
+  { pattern = "mycelium.fpl.dev/*", zone_name = "fpl.dev" }
+]
+
+[assets]
+directory = "./public"
+not_found_handling = "404-page"
