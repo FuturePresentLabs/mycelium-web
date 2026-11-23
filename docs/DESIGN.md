@@ -1,8 +1,11 @@
 # Mycelium website — product and launch design
 
-Status: **v0.1 deployed marketing site**  
-Canonical: **https://mycelium.fpl.dev/**  
-Repo: `FuturePresentLabs/mycelium-web` (remote pending GitHub auth)  
+Status: **v0.1 deployed marketing site**
+
+Canonical: **https://mycelium.fpl.dev/**
+
+Repo: **https://github.com/FuturePresentLabs/mycelium-web**
+
 Reference model: **Rakazo** (`https://rakazo.com/`) — open-source agent workspace, free self-hosting, hosted tiers. The brief said “Ricaso”; Rakazo is the closest credible match.
 
 ## 1. Positioning
