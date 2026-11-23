@@ -1,0 +1,126 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/signup.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Start free — Mycelium"
+      "Start with the open-source project, or join the hosted early access for a managed Mycelium workspace."
+      "https://mycelium.fpl.dev/signup"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "Start free")
+          ))
+          (el "h1" nil (list
+            (txt "Start with what you have.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "The open-source project is ready now. Hosted workspaces are opening in phases, with passkeys and Stripe billing rolling out to the first teams.")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section") (attr :style "padding-top:20px")) (list
+        (el "div" (list (attr :class "wrap page-grid")) (list
+          (el "article" (list (attr :class "panel dark")) (list
+            (el "p" (list (attr :class "eyebrow light")) (list
+              (txt "Self-hosted")
+            ))
+            (el "h2" nil (list
+              (txt "Free, forever.")
+            ))
+            (el "p" nil (list
+              (txt "Run Mycelium on your laptop or server. Bring your own model keys, your own storage, and your own domain. No license key, no seat count, no phone-home requirement.")
+            ))
+            (el "div" (list (attr :class "hero-actions") (attr :style "margin-top:18px")) (list
+              (el "a" (list (attr :class "btn primary") (attr :href "/download")) (list
+                (txt "Install Mycelium")
+              ))
+              (el "a" (list (attr :class "btn ghost") (attr :href "https://github.com/mycelium-linux/mycelium")) (list
+                (txt "View source")
+              ))
+            ))
+          ))
+          (el "article" (list (attr :class "panel")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "Hosted early access")
+            ))
+            (el "h2" nil (list
+              (txt "We run the pager.")
+            ))
+            (el "p" nil (list
+              (txt "Join the first hosted teams. We will provision your workspace, help connect the important tools, and set up billing when you are ready to keep it.")
+            ))
+            (el "form" (list (attr :action "mailto:hello@fpl.dev?subject=Mycelium%20hosted%20early%20access") (attr :method "post") (attr :enctype "text/plain") (attr :style "margin-top:18px")) (list
+              (el "div" (list (attr :class "field")) (list
+                (el "label" (list (attr :for "signup-email")) (list
+                  (txt "Work email")
+                ))
+                (el "input" (list (attr :id "signup-email") (attr :name "email") (attr :type "email") (attr :autocomplete "email") (attr :placeholder "you@company.com") (attr :required #t)) nil)
+              ))
+              (el "div" (list (attr :class "field")) (list
+                (el "label" (list (attr :for "signup-company")) (list
+                  (txt "Company or team")
+                ))
+                (el "input" (list (attr :id "signup-company") (attr :name "company") (attr :type "text") (attr :placeholder "Northstar Studio")) nil)
+              ))
+              (el "div" (list (attr :class "auth-actions")) (list
+                (el "button" (list (attr :class "btn primary") (attr :type "submit")) (list
+                  (txt "Request early access ")
+                  (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                    (txt "→")
+                  ))
+                ))
+              ))
+            ))
+            (el "p" (list (attr :class "auth-small")) (list
+              (txt "Prefer to talk first? ")
+              (el "a" (list (attr :href "mailto:hello@fpl.dev?subject=Mycelium")) (list
+                (txt "hello@fpl.dev")
+              ))
+              (txt ".")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "three reveal")) (list
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "01")
+              ))
+              (el "h3" nil (list
+                (txt "Passkeys, not passwords")
+              ))
+              (el "p" nil (list
+                (txt "Sign in with the device you already trust. Magic links handle recovery and new devices.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "02")
+              ))
+              (el "h3" nil (list
+                (txt "Stripe when you are ready")
+              ))
+              (el "p" nil (list
+                (txt "Start the hosted workspace first. Pick a plan and add payment details when the team is in.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "03")
+              ))
+              (el "h3" nil (list
+                (txt "Leave with your data")
+              ))
+              (el "p" nil (list
+                (txt "Export the workspace and move to self-hosted at any time. Open source means the exit is real.")
+              ))
+            ))
+          ))
+        ))
+      ))
+      ))))

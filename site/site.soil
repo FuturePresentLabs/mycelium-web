@@ -1,0 +1,122 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Shared document shell and chrome for mycelium.fpl.dev.
+
+(defun brand-mark ()
+  (raw "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"2.2\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M12 9.8V4.5M10.4 10.7 6.2 7.2M13.6 10.7l4.2-3.5M10.4 13.3l-4.2 3.5M13.6 13.3l4.2 3.5M12 14.2v5.3\"/><circle cx=\"12\" cy=\"3.6\" r=\"1.2\"/><circle cx=\"5.3\" cy=\"6.6\" r=\"1.2\"/><circle cx=\"18.7\" cy=\"6.6\" r=\"1.2\"/><circle cx=\"5.3\" cy=\"17.4\" r=\"1.2\"/><circle cx=\"18.7\" cy=\"17.4\" r=\"1.2\"/><circle cx=\"12\" cy=\"20.4\" r=\"1.2\"/></svg>"))
+
+(defun brand ()
+  (el "a" (list (attr :class "brand") (attr :href "/") (attr :aria-label "Mycelium home"))
+    (list
+      (el "span" (list (attr :class "brand-mark") (attr :aria-hidden "true"))
+        (list (brand-mark)))
+      (el "span" (list (attr :class "brand-copy"))
+        (list
+          (el "span" (list (attr :class "brand-name")) (list (txt "Mycelium")))
+          (el "span" (list (attr :class "brand-sub")) (list (txt "A Future Present Labs product"))))))))
+
+(defun nav-link (href label)
+  (el "a" (list (attr :href href)) (list (txt label))))
+
+(defun nav ()
+  (el "nav" (list (attr :class "nav") (attr :aria-label "Main navigation"))
+    (list
+      (nav-link "/#product" "Product")
+      (nav-link "/pricing" "Pricing")
+      (nav-link "/integrations" "Integrations")
+      (nav-link "/download" "Self-host")
+      (nav-link "/security" "Security"))))
+
+(defun header-actions ()
+  (el "div" (list (attr :class "header-actions"))
+    (list
+      (el "a" (list (attr :class "header-link") (attr :href "https://github.com/mycelium-linux/mycelium")) (list (txt "GitHub")))
+      (el "a" (list (attr :class "header-link") (attr :href "/login")) (list (txt "Log in")))
+      (el "a" (list (attr :class "btn small primary") (attr :href "/signup"))
+        (list (txt "Start free ") (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list (txt "→")))))
+      (el "button" (list (attr :class "menu-button") (attr :type "button") (attr :aria-label "Open menu") (attr :aria-expanded "false")) (list (txt "☰"))))))
+
+(defun header ()
+  (el "header" (list (attr :class "site-header"))
+    (list
+      (el "div" (list (attr :class "wrap header-inner"))
+        (list (brand) (nav) (header-actions))))))
+
+(defun footer-col (title links)
+  (el "div" (list (attr :class "footer-col"))
+    (list
+      (el "h3" nil (list (txt title)))
+      links)))
+
+(defun footer-link (href label)
+  (el "a" (list (attr :href href)) (list (txt label))))
+
+(defun footer ()
+  (el "footer" (list (attr :class "site-footer"))
+    (list
+      (el "div" (list (attr :class "wrap"))
+        (list
+          (el "div" (list (attr :class "footer-grid"))
+            (list
+              (el "div" (list (attr :class "footer-brand"))
+                (list
+                  (brand)
+                  (el "p" nil (list (txt "The agent-native business operating system. Open source, self-hostable, and built for teams that would rather own their tools than rent their future.")))))
+              (footer-col "Product" (list
+                (footer-link "/pricing" "Pricing")
+                (footer-link "/integrations" "Integrations")
+                (footer-link "/security" "Security")
+                (footer-link "/enterprise" "Enterprise")))
+              (footer-col "Developers" (list
+                (footer-link "/download" "Self-host")
+                (footer-link "/docs/self-hosting" "Install guide")
+                (footer-link "https://github.com/mycelium-linux/mycelium" "GitHub")
+                (footer-link "https://github.com/mycelium-linux/mycelium/issues" "Issues")))
+              (footer-col "Company" (list
+                (footer-link "https://fpl.dev/" "Future Present Labs")
+                (footer-link "https://fpl.dev/mission/" "Mission")
+                (footer-link "https://fpl.dev/cloud/" "FPL Cloud")
+                (footer-link "mailto:hello@fpl.dev" "Contact")))
+              (footer-col "Legal" (list
+                (footer-link "/security" "Trust")
+                (footer-link "/legal/privacy" "Privacy")
+                (footer-link "/legal/terms" "Terms")
+                (footer-link "/legal/dpa" "DPA")))))
+          (el "div" (list (attr :class "footer-bottom"))
+            (list
+              (el "span" nil (list (txt "© ") (el "span" (list (attr :data-year #t)) (list (txt "2026"))) (txt " Future Present Labs LLC. Mycelium is open source under MIT OR Apache-2.0.")))
+              (el "span" nil (list
+                (el "a" (list (attr :href "https://fpl.dev/")) (list (txt "Built by FPL")))
+                (txt " · ")
+                (el "a" (list (attr :href "https://mycelium.fpl.dev/")) (list (txt "mycelium.fpl.dev"))))))))))))
+
+(defun page-og (title description og-description canonical body)
+  (str
+    "<!doctype html>\n"
+    "<html lang=\"en\">\n"
+    "<head>\n"
+    "<meta charset=\"utf-8\">\n"
+    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+    "<title>" (html-escape title) "</title>\n"
+    "<meta name=\"description\" content=\"" (attr-escape description) "\">\n"
+    "<link rel=\"canonical\" href=\"" (attr-escape canonical) "\">\n"
+    "<meta property=\"og:type\" content=\"website\">\n"
+    "<meta property=\"og:title\" content=\"" (attr-escape title) "\">\n"
+    "<meta property=\"og:description\" content=\"" (attr-escape og-description) "\">\n"
+    "<meta property=\"og:url\" content=\"" (attr-escape canonical) "\">\n"
+    "<meta property=\"og:image\" content=\"https://mycelium.fpl.dev/assets/og.png\">\n"
+    "<meta name=\"twitter:card\" content=\"summary_large_image\">\n"
+    "<meta name=\"theme-color\" content=\"#f8f5ff\">\n"
+    "<link rel=\"icon\" href=\"/assets/favicon.svg\" type=\"image/svg+xml\">\n"
+    "<link rel=\"stylesheet\" href=\"/assets/site.css\">\n"
+    "<script defer src=\"/assets/site.js\"></script>\n"
+    "</head>\n"
+    "<body>\n"
+    (render-html (list
+      (el "a" (list (attr :class "skip") (attr :href "#main")) (list (txt "Skip to content")))
+      (header)
+      (el "main" (list (attr :id "main")) body)
+      (footer)))
+    "\n</body>\n</html>\n"))
+
+(defun page (title description canonical body)
+  (page-og title description description canonical body))

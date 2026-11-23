@@ -1,0 +1,178 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/security.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Security & trust — Mycelium"
+      "Open source, exportable, and built around explicit access. Learn how Mycelium handles data, credentials, permissions, hosting, and security disclosures."
+      "https://mycelium.fpl.dev/security"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "Security & trust")
+          ))
+          (el "h1" nil (list
+            (txt "Open by default. Yours by design.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "You should not have to trust a marketing page with your business. Read the source, run it yourself, scope the access, and leave with your data whenever you want.")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section") (attr :style "padding-top:20px")) (list
+        (el "div" (list (attr :class "wrap page-grid")) (list
+          (el "article" (list (attr :class "panel")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "Source")
+            ))
+            (el "h2" nil (list
+              (txt "Inspect it.")
+            ))
+            (el "p" nil (list
+              (txt "The core is open source under MIT OR Apache-2.0. The build, the access model, and the update path are visible. Security through obscurity is not a strategy.")
+            ))
+            (el "p" nil (list
+              (el "a" (list (attr :class "text-link") (attr :style "color:var(--violet-2)") (attr :href "https://github.com/mycelium-linux/mycelium")) (list
+                (txt "github.com/mycelium-linux/mycelium →")
+              ))
+            ))
+          ))
+          (el "article" (list (attr :class "panel")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "Data")
+            ))
+            (el "h2" nil (list
+              (txt "Keep it.")
+            ))
+            (el "p" nil (list
+              (txt "Your workspace data is yours. Export it. Delete it. Self-host it. We do not train models on customer workspace data, and enterprise deployments can keep the data boundary entirely inside your infrastructure.")
+            ))
+          ))
+          (el "article" (list (attr :class "panel")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "Access")
+            ))
+            (el "h2" nil (list
+              (txt "Scope it.")
+            ))
+            (el "p" nil (list
+              (txt "Passkeys for people, scoped credentials for agents, explicit approvals for mutations, and an audit trail for the actions that matter. Credentials are leased at the moment of use, not baked into configuration.")
+            ))
+          ))
+          (el "article" (list (attr :class "panel")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "Hosting")
+            ))
+            (el "h2" nil (list
+              (txt "Isolate it.")
+            ))
+            (el "p" nil (list
+              (txt "Hosted workspaces run on FPL Cloud with per-tenant isolation and encrypted storage. Enterprise customers can choose a dedicated deployment with a private network boundary.")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "section-head reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "The honest status")
+              ))
+              (el "h2" nil (list
+                (txt "What we claim. What we do not.")
+              ))
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "Trust is easier when the claims are specific.")
+            ))
+          ))
+          (el "div" (list (attr :class "three reveal")) (list
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "✓")
+              ))
+              (el "h3" nil (list
+                (txt "We claim")
+              ))
+              (el "p" nil (list
+                (txt "Open-source core, exportable data, scoped access, approval gates, encrypted transport, and a private-deployment path for enterprise.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "→")
+              ))
+              (el "h3" nil (list
+                (txt "In progress")
+              ))
+              (el "p" nil (list
+                (txt "SOC 2 readiness, a public trust center, third-party penetration testing, and formal uptime reporting. We will publish evidence as it exists.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "—")
+              ))
+              (el "h3" nil (list
+                (txt "We do not claim")
+              ))
+              (el "p" nil (list
+                (txt "Certifications we have not earned, customers we do not have, or integrations that are not live. Ask for specifics and we will show our work.")
+              ))
+            ))
+          ))
+          (el "p" (list (attr :class "note reveal") (attr :style "margin-top:18px")) (list
+            (txt "Security disclosure: email ")
+            (el "a" (list (attr :href "mailto:security@fpl.dev") (attr :style "color:var(--violet-2)")) (list
+              (txt "security@fpl.dev")
+            ))
+            (txt ". Please include reproduction steps and give us a reasonable window to fix the issue before public disclosure.")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "enterprise reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Enterprise")
+              ))
+              (el "h2" nil (list
+                (txt "Need a security review?")
+              ))
+              (el "p" (list (attr :class "lede") (attr :style "margin-bottom:20px")) (list
+                (txt "We can provide architecture details, a DPA, subprocessor information, and a private deployment plan.")
+              ))
+              (el "div" (list (attr :class "hero-actions")) (list
+                (el "a" (list (attr :class "btn primary") (attr :href "/enterprise")) (list
+                  (txt "Talk to us ")
+                  (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                    (txt "→")
+                  ))
+                ))
+                (el "a" (list (attr :class "btn") (attr :href "mailto:security@fpl.dev")) (list
+                  (txt "security@fpl.dev")
+                ))
+              ))
+            ))
+            (el "ul" (list (attr :class "enterprise-list")) (list
+              (el "li" nil (list
+                (txt "Private deployment and network isolation")
+              ))
+              (el "li" nil (list
+                (txt "SSO / SCIM and audit export")
+              ))
+              (el "li" nil (list
+                (txt "Data processing agreement")
+              ))
+              (el "li" nil (list
+                (txt "Named security contact")
+              ))
+            ))
+          ))
+        ))
+      ))
+      ))))

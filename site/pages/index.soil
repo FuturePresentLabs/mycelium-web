@@ -1,0 +1,831 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/index.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page-og
+      "Mycelium — the business operating system that builds itself around you"
+      "Mycelium is an open-source, agent-native business operating system. Connect your tools, describe your business, and get a workspace that changes with you. Self-host it or run it with us."
+      "Open source. Agent-native. Yours. Connect your tools and let agents build the workspace your business actually needs."
+      "https://mycelium.fpl.dev/"
+      (list
+      (el "section" (list (attr :class "hero")) (list
+        (el "div" (list (attr :class "wrap hero-grid")) (list
+          (el "div" nil (list
+            (el "div" (list (attr :class "trust-badge")) (list
+              (el "span" (list (attr :class "dot")) nil)
+              (txt " Open source · MIT OR Apache-2.0")
+            ))
+            (el "h1" nil (list
+              (txt "The business operating system that ")
+              (el "em" nil (list
+                (txt "builds itself")
+              ))
+              (txt " around you.")
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "Bring your tools, your models, and your hardware. Describe how your business works. Mycelium turns that into a living workspace — with agents that do the work and apps that change when you do.")
+            ))
+            (el "div" (list (attr :class "hero-actions")) (list
+              (el "a" (list (attr :class "btn primary") (attr :href "/signup")) (list
+                (txt "Start free ")
+                (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                  (txt "→")
+                ))
+              ))
+              (el "a" (list (attr :class "btn") (attr :href "/download")) (list
+                (txt "Run it yourself")
+              ))
+              (el "a" (list (attr :class "btn") (attr :href "https://github.com/mycelium-linux/mycelium")) (list
+                (txt "View source")
+              ))
+            ))
+            (el "div" (list (attr :class "hero-note")) (list
+              (el "span" nil (list
+                (txt "Your data stays yours")
+              ))
+              (el "span" nil (list
+                (txt "Self-host or hosted")
+              ))
+              (el "span" nil (list
+                (txt "Any MCP server")
+              ))
+            ))
+          ))
+          (el "div" (list (attr :class "workspace") (attr :aria-label "Preview of a Mycelium workspace")) (list
+            (el "div" (list (attr :class "ws-top")) (list
+              (el "span" (list (attr :class "ws-dots")) (list
+                (el "i" nil nil)
+                (el "i" nil nil)
+                (el "i" nil nil)
+              ))
+              (el "span" (list (attr :class "ws-title")) (list
+                (txt "Mycelium / Northstar Studio")
+              ))
+              (el "span" (list (attr :class "ws-live")) (list
+                (txt "Live")
+              ))
+            ))
+            (el "div" (list (attr :class "ws-grid")) (list
+              (el "aside" (list (attr :class "ws-rail") (attr :aria-hidden "true")) (list
+                (el "span" (list (attr :class "ws-logo")) (list
+                  (txt "m")
+                ))
+                (el "i" (list (attr :class "active")) nil)
+                (el "i" nil nil)
+                (el "i" nil nil)
+                (el "i" nil nil)
+                (el "i" nil nil)
+              ))
+              (el "div" (list (attr :class "ws-main")) (list
+                (el "div" (list (attr :class "ws-greeting")) (list
+                  (txt "Tuesday · 9:41 am")
+                ))
+                (el "div" (list (attr :class "ws-heading")) (list
+                  (txt "Good morning, Avery.")
+                ))
+                (el "div" (list (attr :class "ws-card")) (list
+                  (el "div" (list (attr :class "ws-card-top")) (list
+                    (el "span" (list (attr :class "ws-avatar")) (list
+                      (txt "IA")
+                    ))
+                    (el "span" (list (attr :class "ws-agent")) (list
+                      (txt "Inbox agent")
+                    ))
+                    (el "span" (list (attr :class "ws-time")) (list
+                      (txt "2m")
+                    ))
+                  ))
+                  (el "div" (list (attr :class "ws-copy")) (list
+                    (txt "41 threads read. ")
+                    (el "strong" nil (list
+                      (txt "5 replies drafted")
+                    ))
+                    (txt " and waiting for your approval. Nora’s renewal is flagged.")
+                  ))
+                  (el "div" (list (attr :class "ws-tags")) (list
+                    (el "span" (list (attr :class "ws-tag")) (list
+                      (txt "Needs you")
+                    ))
+                    (el "span" (list (attr :class "ws-tag")) (list
+                      (txt "Gmail")
+                    ))
+                  ))
+                ))
+                (el "div" (list (attr :class "ws-card")) (list
+                  (el "div" (list (attr :class "ws-card-top")) (list
+                    (el "span" (list (attr :class "ws-avatar")) (list
+                      (txt "OP")
+                    ))
+                    (el "span" (list (attr :class "ws-agent")) (list
+                      (txt "Ops agent")
+                    ))
+                    (el "span" (list (attr :class "ws-time")) (list
+                      (txt "8m")
+                    ))
+                  ))
+                  (el "div" (list (attr :class "ws-copy")) (list
+                    (txt "Vendor renewal found in Drive. ")
+                    (el "strong" nil (list
+                      (txt "Contract clause attached")
+                    ))
+                    (txt " to the decision.")
+                  ))
+                  (el "div" (list (attr :class "ws-tags")) (list
+                    (el "span" (list (attr :class "ws-tag")) (list
+                      (txt "Drive")
+                    ))
+                    (el "span" (list (attr :class "ws-tag")) (list
+                      (txt "Approved")
+                    ))
+                  ))
+                ))
+                (el "div" (list (attr :class "ws-card")) (list
+                  (el "div" (list (attr :class "ws-card-top")) (list
+                    (el "span" (list (attr :class "ws-avatar")) (list
+                      (txt "AP")
+                    ))
+                    (el "span" (list (attr :class "ws-agent")) (list
+                      (txt "App agent")
+                    ))
+                    (el "span" (list (attr :class "ws-time")) (list
+                      (txt "now")
+                    ))
+                  ))
+                  (el "div" (list (attr :class "ws-copy")) (list
+                    (txt "Built ")
+                    (el "strong" nil (list
+                      (txt "Renewal desk")
+                    ))
+                    (txt ": a shared view of every contract, owner, and next step.")
+                  ))
+                  (el "div" (list (attr :class "ws-tags")) (list
+                    (el "span" (list (attr :class "ws-tag")) (list
+                      (txt "New app")
+                    ))
+                    (el "span" (list (attr :class "ws-tag")) (list
+                      (txt "Shared")
+                    ))
+                  ))
+                ))
+                (el "div" (list (attr :class "ws-input")) (list
+                  (el "span" (list (attr :class "cursor")) nil)
+                  (txt " Ask Mycelium to change something…")
+                ))
+              ))
+              (el "aside" (list (attr :class "ws-side")) (list
+                (el "div" (list (attr :class "ws-side-label")) (list
+                  (txt "Live app")
+                ))
+                (el "div" (list (attr :class "ws-app")) (list
+                  (el "div" (list (attr :class "ws-app-head")) (list
+                    (el "b" nil (list
+                      (txt "Renewal desk")
+                    ))
+                    (el "span" nil (list
+                      (txt "Live")
+                    ))
+                  ))
+                  (el "div" (list (attr :class "ws-row")) (list
+                    (el "i" nil nil)
+                    (txt " Acme · March ")
+                    (el "em" nil (list
+                      (txt "You")
+                    ))
+                  ))
+                  (el "div" (list (attr :class "ws-row")) (list
+                    (el "i" nil nil)
+                    (txt " Helix · April ")
+                    (el "em" nil (list
+                      (txt "Sam")
+                    ))
+                  ))
+                  (el "div" (list (attr :class "ws-row")) (list
+                    (el "i" nil nil)
+                    (txt " Northstar · May ")
+                    (el "em" nil (list
+                      (txt "Nora")
+                    ))
+                  ))
+                  (el "div" (list (attr :class "ws-row")) (list
+                    (el "i" nil nil)
+                    (txt " + 9 more ")
+                    (el "em" nil (list
+                      (txt "Auto")
+                    ))
+                  ))
+                ))
+                (el "div" (list (attr :class "ws-side-label") (attr :style "margin-top:14px")) (list
+                  (txt "Connected")
+                ))
+                (el "div" (list (attr :class "ws-tags") (attr :style "margin-left:0")) (list
+                  (el "span" (list (attr :class "ws-tag")) (list
+                    (txt "Gmail")
+                  ))
+                  (el "span" (list (attr :class "ws-tag")) (list
+                    (txt "Slack")
+                  ))
+                  (el "span" (list (attr :class "ws-tag")) (list
+                    (txt "Drive")
+                  ))
+                  (el "span" (list (attr :class "ws-tag")) (list
+                    (txt "MCP")
+                  ))
+                ))
+              ))
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "proof") (attr :aria-label "Product facts")) (list
+        (el "div" (list (attr :class "wrap proof-inner")) (list
+          (el "strong" nil (list
+            (txt "Open source core")
+          ))
+          (el "span" (list (attr :class "sep") (attr :aria-hidden "true")) nil)
+          (el "span" nil (list
+            (txt "Self-host in minutes")
+          ))
+          (el "span" (list (attr :class "sep") (attr :aria-hidden "true")) nil)
+          (el "span" nil (list
+            (txt "Bring your own tokens")
+          ))
+          (el "span" (list (attr :class "sep") (attr :aria-hidden "true")) nil)
+          (el "span" nil (list
+            (txt "Bring your own hardware")
+          ))
+          (el "span" (list (attr :class "sep") (attr :aria-hidden "true")) nil)
+          (el "span" nil (list
+            (txt "Enterprise SLA")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "logo-band") (attr :aria-label "Integrations")) (list
+        (el "div" (list (attr :class "wrap logo-band-head")) (list
+          (el "p" nil (list
+            (txt "Works with what you already use")
+          ))
+          (el "span" nil (list
+            (txt "1,700+ apps through Composio, plus any MCP server.")
+          ))
+        ))
+        (el "div" (list (attr :class "marquee")) (list
+          (el "div" (list (attr :class "marquee-track")) (list
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Beeper")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Gmail")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Slack")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Notion")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "GitHub")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Linear")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Stripe")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "HubSpot")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Salesforce")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Google Drive")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Postgres")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "Figma")
+            ))
+            (el "span" (list (attr :class "logo-pill")) (list
+              (el "i" nil nil)
+              (txt "MCP")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Beeper")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Gmail")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Slack")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Notion")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "GitHub")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Linear")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Stripe")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "HubSpot")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Salesforce")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Google Drive")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Postgres")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "Figma")
+            ))
+            (el "span" (list (attr :class "logo-pill") (attr :aria-hidden "true")) (list
+              (el "i" nil nil)
+              (txt "MCP")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section") (attr :id "product")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "section-head reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "The new shape of software")
+              ))
+              (el "h2" nil (list
+                (txt "Describe the work. The workspace appears.")
+              ))
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "Most software makes you fit its model. Mycelium starts with yours. Agents connect the tools you already pay for, build the views your team needs, and keep changing them as the business changes.")
+            ))
+          ))
+          (el "div" (list (attr :class "steps reveal")) (list
+            (el "div" (list (attr :class "step")) (list
+              (el "div" (list (attr :class "step-num")) (list
+                (txt "01 / Connect")
+              ))
+              (el "div" nil (list
+                (el "h3" nil (list
+                  (txt "Bring your accounts.")
+                ))
+                (el "p" nil (list
+                  (txt "Gmail, Slack, Drive, Notion, GitHub, your CRM, your database, your custom MCP server. Mycelium meets your stack where it is.")
+                ))
+              ))
+            ))
+            (el "div" (list (attr :class "step")) (list
+              (el "div" (list (attr :class "step-num")) (list
+                (txt "02 / Describe")
+              ))
+              (el "div" nil (list
+                (el "h3" nil (list
+                  (txt "Tell it how the business runs.")
+                ))
+                (el "p" nil (list
+                  (txt "“Renewals live in these contracts. Nora owns the relationship. Flag anything under 45 days.” The context becomes a workspace, not a prompt.")
+                ))
+              ))
+            ))
+            (el "div" (list (attr :class "step")) (list
+              (el "div" (list (attr :class "step-num")) (list
+                (txt "03 / Change")
+              ))
+              (el "div" nil (list
+                (el "h3" nil (list
+                  (txt "Talk to it like a teammate.")
+                ))
+                (el "p" nil (list
+                  (txt "Add a field. Change the approval chain. Give the sales team its own view. There is no deployment ceremony — the app is already moving.")
+                ))
+              ))
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "section-head reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "One workspace, every function")
+              ))
+              (el "h2" nil (list
+                (txt "Give every part of the business an agent.")
+              ))
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "Not a chatbot bolted onto a dashboard. A team of agents with jobs, memory, permissions, and a shared view of what is happening.")
+            ))
+          ))
+          (el "div" (list (attr :class "three reveal")) (list
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "01")
+              ))
+              (el "h3" nil (list
+                (txt "Inbox & relationships")
+              ))
+              (el "p" nil (list
+                (txt "Read the thread, remember the context, draft the reply, and hold it for approval. Your voice, your rules.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "02")
+              ))
+              (el "h3" nil (list
+                (txt "Ops & back office")
+              ))
+              (el "p" nil (list
+                (txt "Renewals, vendors, invoices, onboarding. Agents turn scattered documents into a living operating picture.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "03")
+              ))
+              (el "h3" nil (list
+                (txt "Apps & automations")
+              ))
+              (el "p" nil (list
+                (txt "When the work needs a surface, Mycelium builds one. Shared with the team. Editable in conversation. Always current.")
+              ))
+            ))
+          ))
+          (el "div" (list (attr :class "quote reveal") (attr :style "margin-top:18px")) (list
+            (el "blockquote" nil (list
+              (txt "“The work does not wait for a release. Neither should the software.”")
+            ))
+            (el "p" nil (list
+              (txt "The Mycelium design principle")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "open-band")) (list
+        (el "div" (list (attr :class "wrap open-grid")) (list
+          (el "div" (list (attr :class "reveal")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "Open source first")
+            ))
+            (el "h2" nil (list
+              (txt "Run it yourself. Keep the keys.")
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "Mycelium is open source under MIT OR Apache-2.0. Install it on a laptop, a server, or your own cloud. Bring your own models. Move your data whenever you want. Hosted is a convenience, not a cage.")
+            ))
+            (el "div" (list (attr :class "open-actions")) (list
+              (el "a" (list (attr :class "btn primary") (attr :href "/download")) (list
+                (txt "Self-host Mycelium ")
+                (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                  (txt "→")
+                ))
+              ))
+              (el "a" (list (attr :class "btn ghost") (attr :href "https://github.com/mycelium-linux/mycelium")) (list
+                (txt "Browse the source")
+              ))
+            ))
+          ))
+          (el "div" (list (attr :class "reveal")) (list
+            (el "div" (list (attr :class "terminal") (attr :aria-label "Install command")) (list
+              (el "div" (list (attr :class "terminal-top")) (list
+                (el "i" nil nil)
+                (el "i" nil nil)
+                (el "i" nil nil)
+                (el "span" nil (list
+                  (txt "bash · install")
+                ))
+              ))
+              (el "pre" nil (list
+                (el "span" (list (attr :class "prompt")) (list
+                  (txt "$")
+                ))
+                (txt " curl --proto '=https' --tlsv1.2 -fsS \\\n  https://raw.githubusercontent.com/mycelium-linux/mycelium/master/install.sh | bash")
+              ))
+            ))
+            (el "div" (list (attr :class "copy-line")) (list
+              (el "code" (list (attr :id "install-command")) (list
+                (txt "curl --proto '=https' --tlsv1.2 -fsS https://raw.githubusercontent.com/mycelium-linux/mycelium/master/install.sh | bash")
+              ))
+              (el "button" (list (attr :type "button") (attr :data-copy "curl --proto '=https' --tlsv1.2 -fsS https://raw.githubusercontent.com/mycelium-linux/mycelium/master/install.sh | bash")) (list
+                (txt "Copy")
+              ))
+            ))
+            (el "div" (list (attr :style "margin-top:12px;color:rgba(255,255,255,.45);font-family:var(--mono);font-size:10px")) (list
+              (txt "macOS or Linux · safe to re-run · no license key")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section") (attr :id "pricing")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "section-head reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Open source, hosted when you need it")
+              ))
+              (el "h2" nil (list
+                (txt "Start free. Pay for uptime, not permission.")
+              ))
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "The core stays free forever. Paid plans add a managed workspace, shared computers, team controls, and support. Bring your own model keys and hardware whenever you like.")
+            ))
+          ))
+          (el "div" (list (attr :class "pricing-grid reveal")) (list
+            (el "article" (list (attr :class "plan")) (list
+              (el "div" (list (attr :class "plan-label")) (list
+                (el "h3" nil (list
+                  (txt "Starter")
+                ))
+              ))
+              (el "div" (list (attr :class "price")) (list
+                (el "strong" nil (list
+                  (txt "$15")
+                ))
+                (el "span" nil (list
+                  (txt "/ month")
+                ))
+              ))
+              (el "div" (list (attr :class "annual") (attr :data-annual-note #t)) (list
+                (txt "7-day trial · cancel anytime")
+              ))
+              (el "p" (list (attr :class "plan-copy")) (list
+                (txt "For one operator who wants the hosted workspace without the server.")
+              ))
+              (el "ul" nil (list
+                (el "li" nil (list
+                  (txt "1 human · 3 agents")
+                ))
+                (el "li" nil (list
+                  (txt "1 hosted computer")
+                ))
+                (el "li" nil (list
+                  (txt "10 GB workspace storage")
+                ))
+                (el "li" nil (list
+                  (txt "BYO model keys or credits")
+                ))
+                (el "li" nil (list
+                  (txt "Community + email support")
+                ))
+              ))
+              (el "a" (list (attr :class "btn") (attr :href "/signup")) (list
+                (txt "Start free")
+              ))
+            ))
+            (el "article" (list (attr :class "plan featured")) (list
+              (el "div" (list (attr :class "plan-label")) (list
+                (el "h3" nil (list
+                  (txt "Team")
+                ))
+                (el "span" (list (attr :class "badge")) (list
+                  (txt "Most popular")
+                ))
+              ))
+              (el "div" (list (attr :class "price")) (list
+                (el "strong" nil (list
+                  (txt "$49")
+                ))
+                (el "span" nil (list
+                  (txt "/ month")
+                ))
+              ))
+              (el "div" (list (attr :class "annual") (attr :data-annual-note #t)) (list
+                (txt "7-day trial · cancel anytime")
+              ))
+              (el "p" (list (attr :class "plan-copy")) (list
+                (txt "For a small team that wants the business to run on one shared surface.")
+              ))
+              (el "ul" nil (list
+                (el "li" nil (list
+                  (txt "5 humans · 15 agents")
+                ))
+                (el "li" nil (list
+                  (txt "3 hosted computers")
+                ))
+                (el "li" nil (list
+                  (txt "50 GB workspace storage")
+                ))
+                (el "li" nil (list
+                  (txt "Shared routines and approvals")
+                ))
+                (el "li" nil (list
+                  (txt "Passkeys, roles, and invites")
+                ))
+                (el "li" nil (list
+                  (txt "Priority email support")
+                ))
+              ))
+              (el "a" (list (attr :class "btn primary") (attr :href "/signup")) (list
+                (txt "Start free")
+              ))
+            ))
+            (el "article" (list (attr :class "plan")) (list
+              (el "div" (list (attr :class "plan-label")) (list
+                (el "h3" nil (list
+                  (txt "Business")
+                ))
+              ))
+              (el "div" (list (attr :class "price")) (list
+                (el "strong" nil (list
+                  (txt "$99")
+                ))
+                (el "span" nil (list
+                  (txt "/ month")
+                ))
+              ))
+              (el "div" (list (attr :class "annual") (attr :data-annual-note #t)) (list
+                (txt "7-day trial · cancel anytime")
+              ))
+              (el "p" (list (attr :class "plan-copy")) (list
+                (txt "For teams where the workspace is the operating picture, not a side project.")
+              ))
+              (el "ul" nil (list
+                (el "li" nil (list
+                  (txt "15 humans · 50 agents")
+                ))
+                (el "li" nil (list
+                  (txt "10 hosted computers")
+                ))
+                (el "li" nil (list
+                  (txt "200 GB workspace storage")
+                ))
+                (el "li" nil (list
+                  (txt "Audit log and advanced roles")
+                ))
+                (el "li" nil (list
+                  (txt "SSO · 99.9% uptime target")
+                ))
+                (el "li" nil (list
+                  (txt "Priority support")
+                ))
+              ))
+              (el "a" (list (attr :class "btn") (attr :href "/signup")) (list
+                (txt "Start free")
+              ))
+            ))
+          ))
+          (el "div" (list (attr :class "pricing-note")) (list
+            (el "span" nil (list
+              (txt "Annual billing: 2 months free")
+            ))
+            (el "span" nil (list
+              (txt "Extra humans, agents, and computers available")
+            ))
+            (el "span" nil (list
+              (txt "Enterprise from $1,000/mo")
+            ))
+            (el "a" (list (attr :href "/pricing") (attr :style "color:var(--violet-2);text-decoration:none")) (list
+              (txt "See full pricing →")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "enterprise reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Enterprise")
+              ))
+              (el "h2" nil (list
+                (txt "When the business cannot wait.")
+              ))
+              (el "p" (list (attr :class "lede") (attr :style "margin-bottom:22px")) (list
+                (txt "Private deployment, dedicated infrastructure, SSO, audit trails, and a named support path. We run the uptime so you can run the business.")
+              ))
+              (el "div" (list (attr :class "hero-actions")) (list
+                (el "a" (list (attr :class "btn primary") (attr :href "/enterprise")) (list
+                  (txt "Talk to us ")
+                  (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                    (txt "→")
+                  ))
+                ))
+                (el "a" (list (attr :class "btn") (attr :href "/security")) (list
+                  (txt "Security & trust")
+                ))
+              ))
+            ))
+            (el "ul" (list (attr :class "enterprise-list")) (list
+              (el "li" nil (list
+                (txt "Single-tenant or private-cloud deployment on FPL Cloud")
+              ))
+              (el "li" nil (list
+                (txt "99.95% uptime SLA and incident response")
+              ))
+              (el "li" nil (list
+                (txt "SSO / SCIM, audit export, DPA, subprocessors")
+              ))
+              (el "li" nil (list
+                (txt "Migration, onboarding, and architecture review")
+              ))
+              (el "li" nil (list
+                (txt "Your models, your keys, your data boundary")
+              ))
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "section-head reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Questions, answered")
+              ))
+              (el "h2" nil (list
+                (txt "What you probably want to know.")
+              ))
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "If something is missing, ask us. We would rather answer directly than make the site longer.")
+            ))
+          ))
+          (el "div" (list (attr :class "faq reveal")) (list
+            (el "details" nil (list
+              (el "summary" nil (list
+                (txt "Is Mycelium really open source?")
+              ))
+              (el "p" nil (list
+                (txt "Yes. The core is licensed under MIT OR Apache-2.0. You can read it, run it, change it, and self-host it without a license key. The hosted service is a separate convenience layer.")
+              ))
+            ))
+            (el "details" nil (list
+              (el "summary" nil (list
+                (txt "Do I have to bring my own model tokens?")
+              ))
+              (el "p" nil (list
+                (txt "No. You can connect your own provider keys, or buy credits from us. The same choice applies to hardware: bring your own server, or run on ours.")
+              ))
+            ))
+            (el "details" nil (list
+              (el "summary" nil (list
+                (txt "What happens to my data if I leave?")
+              ))
+              (el "p" nil (list
+                (txt "You can export your workspace and take it with you. Hosted workspaces are deleted on a defined schedule after cancellation, with an export window. Self-hosted installs are yours from day one.")
+              ))
+            ))
+            (el "details" nil (list
+              (el "summary" nil (list
+                (txt "Is this another chat app?")
+              ))
+              (el "p" nil (list
+                (txt "No. Chat is one interface. The product is the workspace: agents, shared apps, files, approvals, and the operating context that connects them.")
+              ))
+            ))
+            (el "details" nil (list
+              (el "summary" nil (list
+                (txt "Can I use my existing MCP servers?")
+              ))
+              (el "p" nil (list
+                (txt "Yes. Mycelium is designed to connect to MCP servers alongside the Composio catalog. If your tool exposes MCP, it can be part of the workspace.")
+              ))
+            ))
+            (el "details" nil (list
+              (el "summary" nil (list
+                (txt "Do you train on my data?")
+              ))
+              (el "p" nil (list
+                (txt "No. Your workspace data is not used to train models. Enterprise customers can choose a private deployment and a stricter data boundary.")
+              ))
+            ))
+          ))
+        ))
+      ))
+      ))))

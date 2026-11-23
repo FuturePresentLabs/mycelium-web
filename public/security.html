@@ -1,96 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Security & trust — Mycelium</title>
-  <meta name="description" content="Open source, exportable, and built around explicit access. Learn how Mycelium handles data, credentials, permissions, hosting, and security disclosures.">
-  <link rel="canonical" href="https://mycelium.fpl.dev/security">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Security & trust — Mycelium">
-  <meta property="og:description" content="Open source, exportable, and built around explicit access. Learn how Mycelium handles data, credentials, permissions, hosting, and security disclosures.">
-  <meta property="og:url" content="https://mycelium.fpl.dev/security">
-  <meta property="og:image" content="https://mycelium.fpl.dev/assets/og.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#f8f5ff">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/site.css">
-  <script defer src="/assets/site.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security &amp; trust — Mycelium</title>
+<meta name="description" content="Open source, exportable, and built around explicit access. Learn how Mycelium handles data, credentials, permissions, hosting, and security disclosures.">
+<link rel="canonical" href="https://mycelium.fpl.dev/security">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Security &amp; trust — Mycelium">
+<meta property="og:description" content="Open source, exportable, and built around explicit access. Learn how Mycelium handles data, credentials, permissions, hosting, and security disclosures.">
+<meta property="og:url" content="https://mycelium.fpl.dev/security">
+<meta property="og:image" content="https://mycelium.fpl.dev/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f8f5ff">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/site.js"></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="/" aria-label="Mycelium home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-          <circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/>
-          <path d="M12 9.8V4.5M10.4 10.7 6.2 7.2M13.6 10.7l4.2-3.5M10.4 13.3l-4.2 3.5M13.6 13.3l4.2 3.5M12 14.2v5.3"/>
-          <circle cx="12" cy="3.6" r="1.2"/><circle cx="5.3" cy="6.6" r="1.2"/><circle cx="18.7" cy="6.6" r="1.2"/>
-          <circle cx="5.3" cy="17.4" r="1.2"/><circle cx="18.7" cy="17.4" r="1.2"/><circle cx="12" cy="20.4" r="1.2"/>
-        </svg>
-      </span>
-      <span class="brand-copy">
-        <span class="brand-name">Mycelium</span>
-        <span class="brand-sub">A Future Present Labs product</span>
-      </span>
-    </a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="/#product">Product</a>
-      <a href="/pricing">Pricing</a>
-      <a href="/integrations">Integrations</a>
-      <a href="/download">Self-host</a>
-      <a href="/security">Security</a>
-    </nav>
-    <div class="header-actions">
-      <a class="header-link" href="https://github.com/mycelium-linux/mycelium">GitHub</a>
-      <a class="header-link" href="/login">Log in</a>
-      <a class="btn small primary" href="/signup">Start free <span class="arrow" aria-hidden="true">→</span></a>
-      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-    </div>
-  </div>
-</header>
-<main id="main">
-
-<section class="page-hero"><div class="wrap"><p class="eyebrow">Security &amp; trust</p><h1>Open by default. Yours by design.</h1><p class="lede">You should not have to trust a marketing page with your business. Read the source, run it yourself, scope the access, and leave with your data whenever you want.</p></div></section>
-<section class="section" style="padding-top:20px"><div class="wrap page-grid">
-  <article class="panel"><p class="eyebrow">Source</p><h2>Inspect it.</h2><p>The core is open source under MIT OR Apache-2.0. The build, the access model, and the update path are visible. Security through obscurity is not a strategy.</p><p><a class="text-link" style="color:var(--violet-2)" href="https://github.com/mycelium-linux/mycelium">github.com/mycelium-linux/mycelium →</a></p></article>
-  <article class="panel"><p class="eyebrow">Data</p><h2>Keep it.</h2><p>Your workspace data is yours. Export it. Delete it. Self-host it. We do not train models on customer workspace data, and enterprise deployments can keep the data boundary entirely inside your infrastructure.</p></article>
-  <article class="panel"><p class="eyebrow">Access</p><h2>Scope it.</h2><p>Passkeys for people, scoped credentials for agents, explicit approvals for mutations, and an audit trail for the actions that matter. Credentials are leased at the moment of use, not baked into configuration.</p></article>
-  <article class="panel"><p class="eyebrow">Hosting</p><h2>Isolate it.</h2><p>Hosted workspaces run on FPL Cloud with per-tenant isolation and encrypted storage. Enterprise customers can choose a dedicated deployment with a private network boundary.</p></article>
-</div></section>
-<section class="section"><div class="wrap">
-  <div class="section-head reveal"><div><p class="eyebrow">The honest status</p><h2>What we claim. What we do not.</h2></div><p class="lede">Trust is easier when the claims are specific.</p></div>
-  <div class="three reveal">
-    <article class="feature"><span class="num">✓</span><h3>We claim</h3><p>Open-source core, exportable data, scoped access, approval gates, encrypted transport, and a private-deployment path for enterprise.</p></article>
-    <article class="feature"><span class="num">→</span><h3>In progress</h3><p>SOC 2 readiness, a public trust center, third-party penetration testing, and formal uptime reporting. We will publish evidence as it exists.</p></article>
-    <article class="feature"><span class="num">—</span><h3>We do not claim</h3><p>Certifications we have not earned, customers we do not have, or integrations that are not live. Ask for specifics and we will show our work.</p></article>
-  </div>
-  <p class="note reveal" style="margin-top:18px">Security disclosure: email <a href="mailto:security@fpl.dev" style="color:var(--violet-2)">security@fpl.dev</a>. Please include reproduction steps and give us a reasonable window to fix the issue before public disclosure.</p>
-</div></section>
-<section class="section"><div class="wrap"><div class="enterprise reveal"><div><p class="eyebrow">Enterprise</p><h2>Need a security review?</h2><p class="lede" style="margin-bottom:20px">We can provide architecture details, a DPA, subprocessor information, and a private deployment plan.</p><div class="hero-actions"><a class="btn primary" href="/enterprise">Talk to us <span class="arrow" aria-hidden="true">→</span></a><a class="btn" href="mailto:security@fpl.dev">security@fpl.dev</a></div></div><ul class="enterprise-list"><li>Private deployment and network isolation</li><li>SSO / SCIM and audit export</li><li>Data processing agreement</li><li>Named security contact</li></ul></div></div></section>
-
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="/" aria-label="Mycelium home">
-          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 9.8V4.5M10.4 10.7 6.2 7.2M13.6 10.7l4.2-3.5M10.4 13.3l-4.2 3.5M13.6 13.3l4.2 3.5M12 14.2v5.3"/><circle cx="12" cy="3.6" r="1.2"/><circle cx="5.3" cy="6.6" r="1.2"/><circle cx="18.7" cy="6.6" r="1.2"/><circle cx="5.3" cy="17.4" r="1.2"/><circle cx="18.7" cy="17.4" r="1.2"/><circle cx="12" cy="20.4" r="1.2"/></svg></span>
-          <span class="brand-copy"><span class="brand-name">Mycelium</span><span class="brand-sub">A Future Present Labs product</span></span>
-        </a>
-        <p>The agent-native business operating system. Open source, self-hostable, and built for teams that would rather own their tools than rent their future.</p>
-      </div>
-      <div class="footer-col"><h3>Product</h3><a href="/pricing">Pricing</a><a href="/integrations">Integrations</a><a href="/security">Security</a><a href="/enterprise">Enterprise</a></div>
-      <div class="footer-col"><h3>Developers</h3><a href="/download">Self-host</a><a href="/docs/self-hosting">Install guide</a><a href="https://github.com/mycelium-linux/mycelium">GitHub</a><a href="https://github.com/mycelium-linux/mycelium/issues">Issues</a></div>
-      <div class="footer-col"><h3>Company</h3><a href="https://fpl.dev/">Future Present Labs</a><a href="https://fpl.dev/mission/">Mission</a><a href="https://fpl.dev/cloud/">FPL Cloud</a><a href="mailto:hello@fpl.dev">Contact</a></div>
-      <div class="footer-col"><h3>Legal</h3><a href="/security">Trust</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a><a href="/legal/dpa">DPA</a></div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Future Present Labs LLC. Mycelium is open source under MIT OR Apache-2.0.</span>
-      <span><a href="https://fpl.dev/">Built by FPL</a> · <a href="https://mycelium.fpl.dev/">mycelium.fpl.dev</a></span>
-    </div>
-  </div>
-</footer>
+<a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="/" aria-label="Mycelium home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 9.8V4.5M10.4 10.7 6.2 7.2M13.6 10.7l4.2-3.5M10.4 13.3l-4.2 3.5M13.6 13.3l4.2 3.5M12 14.2v5.3"/><circle cx="12" cy="3.6" r="1.2"/><circle cx="5.3" cy="6.6" r="1.2"/><circle cx="18.7" cy="6.6" r="1.2"/><circle cx="5.3" cy="17.4" r="1.2"/><circle cx="18.7" cy="17.4" r="1.2"/><circle cx="12" cy="20.4" r="1.2"/></svg></span><span class="brand-copy"><span class="brand-name">Mycelium</span><span class="brand-sub">A Future Present Labs product</span></span></a><nav class="nav" aria-label="Main navigation"><a href="/#product">Product</a><a href="/pricing">Pricing</a><a href="/integrations">Integrations</a><a href="/download">Self-host</a><a href="/security">Security</a></nav><div class="header-actions"><a class="header-link" href="https://github.com/mycelium-linux/mycelium">GitHub</a><a class="header-link" href="/login">Log in</a><a class="btn small primary" href="/signup">Start free <span class="arrow" aria-hidden="true">→</span></a><button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">☰</button></div></div></header><main id="main"><section class="page-hero"><div class="wrap"><p class="eyebrow">Security &amp; trust</p><h1>Open by default. Yours by design.</h1><p class="lede">You should not have to trust a marketing page with your business. Read the source, run it yourself, scope the access, and leave with your data whenever you want.</p></div></section><section class="section" style="padding-top:20px"><div class="wrap page-grid"><article class="panel"><p class="eyebrow">Source</p><h2>Inspect it.</h2><p>The core is open source under MIT OR Apache-2.0. The build, the access model, and the update path are visible. Security through obscurity is not a strategy.</p><p><a class="text-link" style="color:var(--violet-2)" href="https://github.com/mycelium-linux/mycelium">github.com/mycelium-linux/mycelium →</a></p></article><article class="panel"><p class="eyebrow">Data</p><h2>Keep it.</h2><p>Your workspace data is yours. Export it. Delete it. Self-host it. We do not train models on customer workspace data, and enterprise deployments can keep the data boundary entirely inside your infrastructure.</p></article><article class="panel"><p class="eyebrow">Access</p><h2>Scope it.</h2><p>Passkeys for people, scoped credentials for agents, explicit approvals for mutations, and an audit trail for the actions that matter. Credentials are leased at the moment of use, not baked into configuration.</p></article><article class="panel"><p class="eyebrow">Hosting</p><h2>Isolate it.</h2><p>Hosted workspaces run on FPL Cloud with per-tenant isolation and encrypted storage. Enterprise customers can choose a dedicated deployment with a private network boundary.</p></article></div></section><section class="section"><div class="wrap"><div class="section-head reveal"><div><p class="eyebrow">The honest status</p><h2>What we claim. What we do not.</h2></div><p class="lede">Trust is easier when the claims are specific.</p></div><div class="three reveal"><article class="feature"><span class="num">✓</span><h3>We claim</h3><p>Open-source core, exportable data, scoped access, approval gates, encrypted transport, and a private-deployment path for enterprise.</p></article><article class="feature"><span class="num">→</span><h3>In progress</h3><p>SOC 2 readiness, a public trust center, third-party penetration testing, and formal uptime reporting. We will publish evidence as it exists.</p></article><article class="feature"><span class="num">—</span><h3>We do not claim</h3><p>Certifications we have not earned, customers we do not have, or integrations that are not live. Ask for specifics and we will show our work.</p></article></div><p class="note reveal" style="margin-top:18px">Security disclosure: email <a href="mailto:security@fpl.dev" style="color:var(--violet-2)">security@fpl.dev</a>. Please include reproduction steps and give us a reasonable window to fix the issue before public disclosure.</p></div></section><section class="section"><div class="wrap"><div class="enterprise reveal"><div><p class="eyebrow">Enterprise</p><h2>Need a security review?</h2><p class="lede" style="margin-bottom:20px">We can provide architecture details, a DPA, subprocessor information, and a private deployment plan.</p><div class="hero-actions"><a class="btn primary" href="/enterprise">Talk to us <span class="arrow" aria-hidden="true">→</span></a><a class="btn" href="mailto:security@fpl.dev">security@fpl.dev</a></div></div><ul class="enterprise-list"><li>Private deployment and network isolation</li><li>SSO / SCIM and audit export</li><li>Data processing agreement</li><li>Named security contact</li></ul></div></div></section></main><footer class="site-footer"><div class="wrap"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="/" aria-label="Mycelium home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 9.8V4.5M10.4 10.7 6.2 7.2M13.6 10.7l4.2-3.5M10.4 13.3l-4.2 3.5M13.6 13.3l4.2 3.5M12 14.2v5.3"/><circle cx="12" cy="3.6" r="1.2"/><circle cx="5.3" cy="6.6" r="1.2"/><circle cx="18.7" cy="6.6" r="1.2"/><circle cx="5.3" cy="17.4" r="1.2"/><circle cx="18.7" cy="17.4" r="1.2"/><circle cx="12" cy="20.4" r="1.2"/></svg></span><span class="brand-copy"><span class="brand-name">Mycelium</span><span class="brand-sub">A Future Present Labs product</span></span></a><p>The agent-native business operating system. Open source, self-hostable, and built for teams that would rather own their tools than rent their future.</p></div><div class="footer-col"><h3>Product</h3><a href="/pricing">Pricing</a><a href="/integrations">Integrations</a><a href="/security">Security</a><a href="/enterprise">Enterprise</a></div><div class="footer-col"><h3>Developers</h3><a href="/download">Self-host</a><a href="/docs/self-hosting">Install guide</a><a href="https://github.com/mycelium-linux/mycelium">GitHub</a><a href="https://github.com/mycelium-linux/mycelium/issues">Issues</a></div><div class="footer-col"><h3>Company</h3><a href="https://fpl.dev/">Future Present Labs</a><a href="https://fpl.dev/mission/">Mission</a><a href="https://fpl.dev/cloud/">FPL Cloud</a><a href="mailto:hello@fpl.dev">Contact</a></div><div class="footer-col"><h3>Legal</h3><a href="/security">Trust</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a><a href="/legal/dpa">DPA</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> Future Present Labs LLC. Mycelium is open source under MIT OR Apache-2.0.</span><span><a href="https://fpl.dev/">Built by FPL</a> · <a href="https://mycelium.fpl.dev/">mycelium.fpl.dev</a></span></div></div></footer>
 </body>
 </html>

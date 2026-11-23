@@ -1,0 +1,266 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/integrations.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Integrations — Mycelium"
+      "Connect Gmail, Slack, Notion, GitHub, Stripe, HubSpot, Postgres, Beeper, and 1,700+ apps through Composio — plus any MCP server."
+      "https://mycelium.fpl.dev/integrations"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "Integrations")
+          ))
+          (el "h1" nil (list
+            (txt "Bring your stack. Keep your stack.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "The best operating system is the one that already knows where your work lives. Connect the tools you pay for, keep your own MCP servers, and let the agents do the translation.")
+          ))
+          (el "div" (list (attr :class "hero-actions")) (list
+            (el "a" (list (attr :class "btn primary") (attr :href "/signup")) (list
+              (txt "Connect your stack ")
+              (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
+                (txt "→")
+              ))
+            ))
+            (el "a" (list (attr :class "btn") (attr :href "https://composio.dev/toolkits")) (list
+              (txt "Browse the Composio catalog")
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section") (attr :style "padding-top:20px")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "logo-band-head")) (list
+            (el "p" nil (list
+              (txt "Representative integrations")
+            ))
+            (el "span" nil (list
+              (txt "1,700+ apps through Composio, plus any MCP server.")
+            ))
+          ))
+          (el "div" (list (attr :class "integration-grid reveal")) (list
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Beeper")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Gmail")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Google Drive")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Slack")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Notion")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "GitHub")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Linear")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Stripe")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "HubSpot")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Salesforce")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Postgres")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Figma")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Google Calendar")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Microsoft Teams")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "WhatsApp")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Telegram")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Dropbox")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Airtable")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Jira")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Discord")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Twilio")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Shopify")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "QuickBooks")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Snowflake")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "BigQuery")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "S3")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "MCP")
+            ))
+            (el "div" (list (attr :class "integration")) (list
+              (el "i" nil nil)
+              (txt "Custom HTTP")
+            ))
+          ))
+          (el "p" (list (attr :class "note reveal") (attr :style "margin-top:18px")) (list
+            (txt "Logos and product names belong to their owners. “Works with” means a supported connection, not a partnership or endorsement.")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap page-grid")) (list
+          (el "article" (list (attr :class "panel")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "MCP first")
+            ))
+            (el "h2" nil (list
+              (txt "If it speaks MCP, it belongs.")
+            ))
+            (el "p" nil (list
+              (txt "Mycelium uses MCP to connect tools, resources, and prompts. Point it at a local server, a hosted endpoint, or your own internal service. Scope access per agent and keep the credentials in the workspace boundary.")
+            ))
+            (el "div" (list (attr :class "code-block")) (list
+              (el "span" (list (attr :class "c")) (list
+                (txt "# example")
+              ))
+              (el "br" nil nil)
+              (el "span" (list (attr :class "g")) (list
+                (txt "mycelium")
+              ))
+              (txt " mcp add internal-crm \\")
+              (el "br" nil nil)
+              (txt "  --url https://mcp.internal.example/sse \\")
+              (el "br" nil nil)
+              (txt "  --scope crm.read")
+            ))
+          ))
+          (el "article" (list (attr :class "panel")) (list
+            (el "p" (list (attr :class "eyebrow")) (list
+              (txt "Composio")
+            ))
+            (el "h2" nil (list
+              (txt "1,700+ apps without 1,700 integrations.")
+            ))
+            (el "p" nil (list
+              (txt "Composio gives Mycelium a broad catalog of authenticated app actions. Connect Gmail, Slack, HubSpot, Salesforce, Notion, GitHub, and more without waiting for us to build each connector from scratch.")
+            ))
+            (el "p" nil (list
+              (el "a" (list (attr :class "text-link") (attr :style "color:var(--violet-2)") (attr :href "https://composio.dev/")) (list
+                (txt "Learn about Composio →")
+              ))
+            ))
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "section-head reveal")) (list
+            (el "div" nil (list
+              (el "p" (list (attr :class "eyebrow")) (list
+                (txt "Need something else?")
+              ))
+              (el "h2" nil (list
+                (txt "The long tail is the point.")
+              ))
+            ))
+            (el "p" (list (attr :class "lede")) (list
+              (txt "If your business runs on a tool nobody has heard of, that is exactly the kind of tool we want to connect.")
+            ))
+          ))
+          (el "div" (list (attr :class "three reveal")) (list
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "01")
+              ))
+              (el "h3" nil (list
+                (txt "Custom MCP")
+              ))
+              (el "p" nil (list
+                (txt "Wrap your internal API in an MCP server and bring it into the workspace. Your auth, your scopes, your data.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "02")
+              ))
+              (el "h3" nil (list
+                (txt "Bring your own keys")
+              ))
+              (el "p" nil (list
+                (txt "Use your model provider, your cloud, and your storage. Mycelium coordinates; it does not have to own the account.")
+              ))
+            ))
+            (el "article" (list (attr :class "feature")) (list
+              (el "span" (list (attr :class "num")) (list
+                (txt "03")
+              ))
+              (el "h3" nil (list
+                (txt "Request a connector")
+              ))
+              (el "p" nil (list
+                (txt "Tell us what is missing. If it has an API or an MCP server, there is a path.")
+              ))
+              (el "div" (list (attr :style "margin-top:14px")) (list
+                (el "a" (list (attr :class "btn small") (attr :href "mailto:hello@fpl.dev?subject=Mycelium%20integration%20request")) (list
+                  (txt "Request an integration")
+                ))
+              ))
+            ))
+          ))
+        ))
+      ))
+      ))))

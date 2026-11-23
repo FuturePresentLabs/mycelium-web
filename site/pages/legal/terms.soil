@@ -1,0 +1,69 @@
+; SPDX-License-Identifier: MIT OR Apache-2.0
+; Ported from public/legal/terms.html — keep the shared shell in site/site.soil.
+
+(defun main ()
+  (println
+    (page
+      "Terms — Mycelium"
+      "Terms for the Mycelium website and hosted service."
+      "https://mycelium.fpl.dev/legal/terms"
+      (list
+      (el "section" (list (attr :class "page-hero")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "p" (list (attr :class "eyebrow")) (list
+            (txt "Legal")
+          ))
+          (el "h1" nil (list
+            (txt "Terms.")
+          ))
+          (el "p" (list (attr :class "lede")) (list
+            (txt "The rules for using the Mycelium website and hosted service.")
+          ))
+        ))
+      ))
+      (el "section" (list (attr :class "section")) (list
+        (el "div" (list (attr :class "wrap")) (list
+          (el "div" (list (attr :class "legal")) (list
+            (el "h2" nil (list
+              (txt "Open source")
+            ))
+            (el "p" nil (list
+              (txt "The Mycelium core is licensed under MIT OR Apache-2.0. Your use of the source is governed by those licenses, not these terms.")
+            ))
+            (el "h2" nil (list
+              (txt "Hosted service")
+            ))
+            (el "p" nil (list
+              (txt "Hosted plans are billed monthly or annually through Stripe. You are responsible for your account, your users, and the actions you authorize agents to take. Do not use the service to violate law or the rights of others.")
+            ))
+            (el "h2" nil (list
+              (txt "Availability")
+            ))
+            (el "p" nil (list
+              (txt "Business plans target 99.9% monthly availability. Enterprise plans may include a separate 99.95% SLA. Targets, credits, and exclusions are defined in the applicable order form.")
+            ))
+            (el "h2" nil (list
+              (txt "Cancellation and export")
+            ))
+            (el "p" nil (list
+              (txt "You can cancel at any time. Hosted workspaces remain available through the current billing period and for a defined export window afterward. We will delete workspace data on the published schedule unless a legal or security obligation requires retention.")
+            ))
+            (el "h2" nil (list
+              (txt "No warranty")
+            ))
+            (el "p" nil (list
+              (txt "The service is provided as-is except where an enterprise agreement says otherwise. You are responsible for reviewing agent actions and maintaining backups of self-hosted installations.")
+            ))
+            (el "h2" nil (list
+              (txt "Contact")
+            ))
+            (el "p" nil (list
+              (txt "Future Present Labs LLC · legal@fpl.dev")
+            ))
+            (el "p" (list (attr :class "note")) (list
+              (txt "This is a working draft for the launch site, not a substitute for counsel-reviewed terms. Replace before taking payment.")
+            ))
+          ))
+        ))
+      ))
+      ))))
