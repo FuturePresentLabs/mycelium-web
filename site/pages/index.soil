@@ -5,8 +5,8 @@
   (println
     (page-og
       "Mycelium — the business operating system that builds itself around you"
-      "Mycelium is an open-source, agent-native business operating system. Connect your tools, describe your business, and get a workspace that changes with you. Self-host it or run it with us."
-      "Open source. Agent-native. Yours. Connect your tools and let agents build the workspace your business actually needs."
+      "Mycelium is an open-source, agent-native business operating system. Connect your tools, describe your business, and get a desktop that changes with you. Self-host it or run it with us."
+      "Open source. Agent-native. Yours. Connect your tools and let agents build the desktop your business actually needs."
       "https://mycelium.fpl.dev/"
       (list
       (el "section" (list (attr :class "hero")) (list
@@ -24,7 +24,7 @@
               (txt " around you.")
             ))
             (el "p" (list (attr :class "lede")) (list
-              (txt "Bring your tools, your models, and your hardware. Describe how your business works. Mycelium turns that into a living workspace — with agents that do the work and apps that change when you do.")
+              (txt "Bring your tools, your models, and your hardware. Describe how your business works. Mycelium turns that into a living desktop — with agents that do the work and apps that change when you do.")
             ))
             (el "div" (list (attr :class "hero-actions")) (list
               (el "a" (list (attr :class "btn primary") (attr :href "/signup")) (list
@@ -52,7 +52,7 @@
               ))
             ))
           ))
-          (el "div" (list (attr :class "workspace") (attr :aria-label "Preview of a Mycelium workspace")) (list
+          (el "div" (list (attr :class "workspace") (attr :aria-label "Preview of a Mycelium desktop")) (list
             (el "div" (list (attr :class "ws-top")) (list
               (el "span" (list (attr :class "ws-dots")) (list
                 (el "i" nil nil)
@@ -386,7 +386,7 @@
                 (txt "The new shape of software")
               ))
               (el "h2" nil (list
-                (txt "Describe the work. The workspace appears.")
+                (txt "Describe the work. The desktop appears.")
               ))
             ))
             (el "p" (list (attr :class "lede")) (list
@@ -416,7 +416,7 @@
                   (txt "Tell it how the business runs.")
                 ))
                 (el "p" nil (list
-                  (txt "“Renewals live in these contracts. Nora owns the relationship. Flag anything under 45 days.” The context becomes a workspace, not a prompt.")
+                  (txt "“Renewals live in these contracts. Nora owns the relationship. Flag anything under 45 days.” The context becomes a desktop, not a prompt.")
                 ))
               ))
             ))
@@ -441,7 +441,7 @@
           (el "div" (list (attr :class "section-head reveal")) (list
             (el "div" nil (list
               (el "p" (list (attr :class "eyebrow")) (list
-                (txt "One workspace, every function")
+                (txt "One desktop, every function")
               ))
               (el "h2" nil (list
                 (txt "Give every part of the business an agent.")
@@ -570,7 +570,7 @@
             (el "article" (list (attr :class "plan")) (list
               (el "div" (list (attr :class "plan-label")) (list
                 (el "h3" nil (list
-                  (txt "Starter")
+                  (txt "Solo")
                 ))
               ))
               (el "div" (list (attr :class "price")) (list
@@ -589,13 +589,13 @@
               ))
               (el "ul" nil (list
                 (el "li" nil (list
-                  (txt "1 human · 3 agents")
+                  (txt "1 person · 3 agents")
                 ))
                 (el "li" nil (list
-                  (txt "1 hosted desktop · m.fpl.dev")
+                  (txt "Personal + Work desktops")
                 ))
                 (el "li" nil (list
-                  (txt "10 GB workspace storage")
+                  (txt "25 GB pooled storage")
                 ))
                 (el "li" nil (list
                   (txt "BYO model keys or credits")
@@ -619,33 +619,33 @@
               ))
               (el "div" (list (attr :class "price")) (list
                 (el "strong" nil (list
-                  (txt "$49")
+                  (txt "$30")
                 ))
                 (el "span" nil (list
-                  (txt "/ month")
+                  (txt "/ seat / month")
                 ))
               ))
               (el "div" (list (attr :class "annual") (attr :data-annual-note #t)) (list
                 (txt "7-day trial · cancel anytime")
               ))
               (el "p" (list (attr :class "plan-copy")) (list
-                (txt "For a small team that wants the business to run on one shared surface.")
+                (txt "For a small team that runs one shared Work desktop. Up to three people.")
               ))
               (el "ul" nil (list
                 (el "li" nil (list
-                  (txt "5 humans · 15 agents")
+                  (txt "Up to 3 people · 15 agents")
                 ))
                 (el "li" nil (list
-                  (txt "Shared hosted desktop")
+                  (txt "One shared Work desktop")
                 ))
                 (el "li" nil (list
-                  (txt "50 GB workspace storage")
+                  (txt "100 GB pooled storage")
                 ))
                 (el "li" nil (list
-                  (txt "Shared routines and approvals")
+                  (txt "Invites, roles, and shared files")
                 ))
                 (el "li" nil (list
-                  (txt "Magic-link sign-in, roles, and invites")
+                  (txt "Personal + shared Work token wallet")
                 ))
                 (el "li" nil (list
                   (txt "Priority email support")
@@ -673,17 +673,17 @@
                 (txt "7-day trial · cancel anytime")
               ))
               (el "p" (list (attr :class "plan-copy")) (list
-                (txt "For teams where the workspace is the operating picture, not a side project.")
+                (txt "For teams where the desktop is the operating picture, not a side project.")
               ))
               (el "ul" nil (list
                 (el "li" nil (list
-                  (txt "15 humans · 50 agents")
+                  (txt "Up to 10 people · 50 agents")
                 ))
                 (el "li" nil (list
                   (txt "Hosted desktop + 1 always-on runner")
                 ))
                 (el "li" nil (list
-                  (txt "200 GB workspace storage")
+                  (txt "500 GB pooled storage")
                 ))
                 (el "li" nil (list
                   (txt "Audit log and advanced roles")
@@ -705,10 +705,10 @@
               (txt "Annual billing: 2 months free")
             ))
             (el "span" nil (list
-              (txt "Always-on add-on: $25/mo small · $49/mo default")
+              (txt "Storage add-on: $5 per 100 GB/mo · token credits top up anytime")
             ))
             (el "span" nil (list
-              (txt "Extra humans, agents, and storage available")
+              (txt "Extra seats, storage, and token credits")
             ))
             (el "span" nil (list
               (txt "Enterprise from $1,000/mo")
@@ -801,7 +801,7 @@
                 (txt "What happens to my data if I leave?")
               ))
               (el "p" nil (list
-                (txt "You can export your workspace and take it with you. Hosted workspaces are deleted on a defined schedule after cancellation, with an export window. Self-hosted installs are yours from day one.")
+                (txt "You can export your desktops and take them with you. Hosted desktops are deleted on a defined schedule after cancellation, with an export window. Self-hosted installs are yours from day one.")
               ))
             ))
             (el "details" nil (list
@@ -809,7 +809,7 @@
                 (txt "Is this another chat app?")
               ))
               (el "p" nil (list
-                (txt "No. Chat is one interface. The product is the workspace: agents, shared apps, files, approvals, and the operating context that connects them.")
+                (txt "No. Chat is one interface. The product is the desktop: agents, shared apps, files, approvals, and the operating context that connects them.")
               ))
             ))
             (el "details" nil (list
@@ -817,7 +817,7 @@
                 (txt "Can I use my existing MCP servers?")
               ))
               (el "p" nil (list
-                (txt "Yes. Mycelium is designed to connect to MCP servers alongside the Composio catalog. If your tool exposes MCP, it can be part of the workspace.")
+                (txt "Yes. Mycelium is designed to connect to MCP servers alongside the Composio catalog. If your tool exposes MCP, it can be part of the desktop.")
               ))
             ))
             (el "details" nil (list
@@ -825,7 +825,7 @@
                 (txt "Do you train on my data?")
               ))
               (el "p" nil (list
-                (txt "No. Your workspace data is not used to train models. Enterprise customers can choose a private deployment and a stricter data boundary.")
+                (txt "No. Your desktop data is not used to train models. Enterprise customers can choose a private deployment and a stricter data boundary.")
               ))
             ))
           ))

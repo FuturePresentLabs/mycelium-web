@@ -82,15 +82,17 @@ in `public/` is committed for Cloudflare deployment.
 
 The site launched with **$15 / $49 / $99**, not $15/$50/$100. The extra dollar buys psychological room and matches the Rakazo model.
 
-| Plan | Monthly | Annual | Humans | Agents | Hosted computers | Storage |
-|---|---:|---:|---:|---:|---:|---:|
+| Plan | Monthly | Annual | People | Agents | Desktops | Pooled storage |
+|---|---:|---:|---:|---:|---|---:|
 | Self-hosted | $0 | — | Your hardware | Your hardware | Your hardware | Your storage |
-| Starter | $15 | $150 | 1 | 3 | 1 | 10 GB |
-| Team | $49 | $490 | 5 | 15 | 3 | 50 GB |
-| Business | $99 | $990 | 15 | 50 | 10 | 200 GB |
+| Solo | $15 | $150 | 1 | 3 | Personal + Work | 25 GB |
+| Team | $30/seat | $300/seat | up to 3 | 15 | Personal each + shared Work | 100 GB |
+| Business | $99 | $990 | up to 10 | 50 | Personal each + shared Work | 500 GB |
 | Enterprise | from $1,000 | custom | custom | custom | dedicated | custom |
 
-Add-ons: extra human, extra agent, extra hosted computer, storage, model credits. Annual = two months free. Seven-day trial. No setup fee.
+Add-ons: extra seats, extra shared desktops, storage ($5/100 GB), model credits.
+Annual = two months free. Seven-day trial. No setup fee. Desktops are the
+sharing unit; seats are the billing unit.
 
 ### Research anchors
 

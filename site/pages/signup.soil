@@ -5,7 +5,7 @@
   (println
     (page
       "Start free — Mycelium"
-      "Start with the open-source project, or join the hosted early access for a managed Mycelium workspace."
+      "Start with the open-source project, or join the hosted early access for a managed Mycelium desktop."
       "https://mycelium.fpl.dev/signup"
       (list
       (el "section" (list (attr :class "page-hero")) (list
@@ -50,7 +50,7 @@
               (txt "We run the desktop.")
             ))
             (el "p" nil (list
-              (txt "Start with one workspace and a real desktop at m.fpl.dev. Your card starts the trial; cancel from the billing portal at any time.")
+              (txt "Start with two desktops at m.fpl.dev: Personal and Work. Your card starts the trial; cancel from the billing portal at any time.")
             ))
             (el "form" (list (attr :id "hosted-signup") (attr :style "margin-top:18px") (attr :novalidate #t)) (list
               (el "div" (list (attr :class "field")) (list
@@ -64,8 +64,8 @@
                   (txt "Plan")
                 ))
                 (el "select" (list (attr :id "signup-plan") (attr :name "plan") (attr :style "width:100%;padding:12px;border:1px solid var(--line);background:var(--bg);color:var(--text)")) (list
-                  (el "option" (list (attr :value "starter")) (list (txt "Starter · $15/mo")))
-                  (el "option" (list (attr :value "team")) (list (txt "Team · $49/mo")))
+                  (el "option" (list (attr :value "starter")) (list (txt "Solo · $15/mo")))
+                  (el "option" (list (attr :value "team")) (list (txt "Team · $30/seat/mo")))
                   (el "option" (list (attr :value "business")) (list (txt "Business · $99/mo")))
                 ))
               ))
@@ -106,10 +106,10 @@
                 (txt "01")
               ))
               (el "h3" nil (list
-                (txt "Magic links, not passwords")
+                (txt "Passkeys through FPL Auth")
               ))
               (el "p" nil (list
-                (txt "Sign in from a one-time email link. Passkeys arrive after the first hosted cohort.")
+                (txt "Sign in with FPL Auth. Your hosted desktop stays behind the same identity as the rest of FPL.")
               ))
             ))
             (el "article" (list (attr :class "feature")) (list
@@ -131,7 +131,7 @@
                 (txt "Leave with your data")
               ))
               (el "p" nil (list
-                (txt "Export the workspace and move to self-hosted at any time. Open source means the exit is real.")
+                (txt "Export the desktop and move to self-hosted at any time. Open source means the exit is real.")
               ))
             ))
           ))

@@ -17,7 +17,7 @@
             (txt "Open source forever. Hosted when you need it.")
           ))
           (el "p" (list (attr :class "lede")) (list
-            (txt "The core is free to run anywhere. Paid plans sell the boring, important parts: a desktop that stays up, a custom domain, team controls, and someone to call when it matters.")
+            (txt "The core is free to run anywhere. Paid plans sell the boring, important parts: a desktop that stays up, a shared Work desk, team controls, and someone to call when it matters.")
           ))
           (el "div" (list (attr :style "display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:24px")) (list
             (el "div" (list (attr :class "billing-toggle") (attr :role "group") (attr :aria-label "Billing period")) (list
@@ -40,7 +40,7 @@
             (el "article" (list (attr :class "plan")) (list
               (el "div" (list (attr :class "plan-label")) (list
                 (el "h3" nil (list
-                  (txt "Starter")
+                  (txt "Solo")
                 ))
               ))
               (el "div" (list (attr :class "price")) (list
@@ -55,26 +55,26 @@
                 (txt "billed monthly")
               ))
               (el "p" (list (attr :class "plan-copy")) (list
-                (txt "For one operator who wants the hosted desktop without the server.")
+                (txt "For one person who wants a personal desk and a work desk without running the server.")
               ))
               (el "ul" nil (list
                 (el "li" nil (list
-                  (txt "1 human · 3 agents")
+                  (txt "1 person · 3 agents")
                 ))
                 (el "li" nil (list
-                  (txt "1 hosted desktop · m.fpl.dev")
+                  (txt "Personal + Work desktops")
                 ))
                 (el "li" nil (list
-                  (txt "10 GB workspace storage")
+                  (txt "25 GB pooled storage")
                 ))
                 (el "li" nil (list
                   (txt "Custom domain")
                 ))
                 (el "li" nil (list
-                  (txt "Always-on runners available as an add-on")
+                  (txt "Token trial credit · top up anytime")
                 ))
                 (el "li" nil (list
-                  (txt "BYO model keys or credits")
+                  (txt "BYO model keys or our credits")
                 ))
                 (el "li" nil (list
                   (txt "Community + email support")
@@ -94,37 +94,37 @@
                 ))
               ))
               (el "div" (list (attr :class "price")) (list
-                (el "strong" (list (attr :data-monthly "$49") (attr :data-annual "$490")) (list
-                  (txt "$49")
+                (el "strong" (list (attr :data-monthly "$30") (attr :data-annual "$300")) (list
+                  (txt "$30")
                 ))
                 (el "span" nil (list
-                  (txt "/ month")
+                  (txt "/ seat / month")
                 ))
               ))
               (el "div" (list (attr :class "annual") (attr :data-annual-note #t)) (list
                 (txt "billed monthly")
               ))
               (el "p" (list (attr :class "plan-copy")) (list
-                (txt "For a small team that wants the business to run on one shared surface.")
+                (txt "For a small team that runs one shared Work desktop. Up to three people.")
               ))
               (el "ul" nil (list
                 (el "li" nil (list
-                  (txt "5 humans · 15 agents")
+                  (txt "Up to 3 people · 15 agents")
                 ))
                 (el "li" nil (list
-                  (txt "Shared hosted desktop")
+                  (txt "Everyone gets a Personal desktop")
                 ))
                 (el "li" nil (list
-                  (txt "50 GB workspace storage")
+                  (txt "One shared Work desktop")
                 ))
                 (el "li" nil (list
                   (txt "Custom domain")
                 ))
                 (el "li" nil (list
-                  (txt "Shared routines and approvals")
+                  (txt "Invites, roles, and shared files")
                 ))
                 (el "li" nil (list
-                  (txt "Magic-link sign-in, roles, and invites")
+                  (txt "Personal + shared Work token wallet")
                 ))
                 (el "li" nil (list
                   (txt "Priority email support")
@@ -152,17 +152,17 @@
                 (txt "billed monthly")
               ))
               (el "p" (list (attr :class "plan-copy")) (list
-                (txt "For teams where the workspace is the operating picture, not a side project.")
+                (txt "For teams where the desktop is the operating picture, not a side project.")
               ))
               (el "ul" nil (list
                 (el "li" nil (list
-                  (txt "15 humans · 50 agents")
+                  (txt "Up to 10 people · 50 agents")
                 ))
                 (el "li" nil (list
-                  (txt "Hosted desktop + 1 always-on runner")
+                  (txt "More shared desktops + runner")
                 ))
                 (el "li" nil (list
-                  (txt "200 GB workspace storage")
+                  (txt "500 GB pooled storage")
                 ))
                 (el "li" nil (list
                   (txt "Custom domain")
@@ -184,13 +184,13 @@
           ))
           (el "div" (list (attr :class "pricing-note")) (list
             (el "span" nil (list
-              (txt "Annual billing: 2 months free · custom domains on paid plans")
+              (txt "Annual billing: 2 months free · seats include Personal + Work desktops")
             ))
             (el "span" nil (list
-              (txt "Always-on add-on: $25/mo small · $49/mo default")
+              (txt "Storage add-on: $5 per 100 GB/mo · token credits top up anytime")
             ))
             (el "span" nil (list
-              (txt "Extra humans, agents, and storage available")
+              (txt "Extra seats and shared desktops arrive as the team grows")
             ))
             (el "span" nil (list
               (txt "Enterprise from $1,000/mo")
@@ -210,7 +210,7 @@
               ))
             ))
             (el "p" (list (attr :class "lede")) (list
-              (txt "Start smaller than you think you need. Upgrade when the workspace becomes the place the team actually works.")
+              (txt "Start smaller than you think you need. Upgrade when the desktop becomes the place the team actually works.")
             ))
           ))
           (el "div" (list (attr :class "plan-table-wrap reveal")) (list
@@ -221,7 +221,7 @@
                     (txt "Included")
                   ))
                   (el "th" nil (list
-                    (txt "Starter")
+                    (txt "Solo")
                   ))
                   (el "th" nil (list
                     (txt "Team")
@@ -243,7 +243,7 @@
                     (txt "$15/mo")
                   ))
                   (el "td" nil (list
-                    (txt "$49/mo")
+                    (txt "$30/seat/mo")
                   ))
                   (el "td" nil (list
                     (txt "$99/mo")
@@ -254,16 +254,16 @@
                 ))
                 (el "tr" nil (list
                   (el "td" nil (list
-                    (txt "Humans")
+                    (txt "People")
                   ))
                   (el "td" nil (list
                     (txt "1")
                   ))
                   (el "td" nil (list
-                    (txt "5")
+                    (txt "Up to 3")
                   ))
                   (el "td" nil (list
-                    (txt "15")
+                    (txt "Up to 10")
                   ))
                   (el "td" nil (list
                     (txt "Custom")
@@ -288,16 +288,16 @@
                 ))
                 (el "tr" nil (list
                   (el "td" nil (list
-                    (txt "Hosted desktop")
+                    (txt "Desktops")
                   ))
                   (el "td" nil (list
-                    (txt "1")
+                    (txt "Personal + Work")
                   ))
                   (el "td" nil (list
-                    (txt "Shared")
+                    (txt "Personal + shared Work")
                   ))
                   (el "td" nil (list
-                    (txt "1 + runner")
+                    (txt "Personal + shared Work")
                   ))
                   (el "td" nil (list
                     (txt "Dedicated")
@@ -339,16 +339,16 @@
                 ))
                 (el "tr" nil (list
                   (el "td" nil (list
-                    (txt "Workspace storage")
+                    (txt "Pooled storage")
                   ))
                   (el "td" nil (list
-                    (txt "10 GB")
+                    (txt "25 GB")
                   ))
                   (el "td" nil (list
-                    (txt "50 GB")
+                    (txt "100 GB")
                   ))
                   (el "td" nil (list
-                    (txt "200 GB")
+                    (txt "500 GB")
                   ))
                   (el "td" nil (list
                     (txt "Custom")
@@ -435,11 +435,11 @@
                 (txt "Billing, without the fog")
               ))
               (el "h2" nil (list
-                (txt "Four things make up a bill.")
+                (txt "Three things make up a bill.")
               ))
             ))
             (el "p" (list (attr :class "lede")) (list
-              (txt "Models are yours or ours. Hardware is yours or ours. You pay for the workspace, the people, the agents, and the compute that keeps it alive.")
+              (txt "Models are yours or ours. Hardware is yours or ours. You pay for seats, pooled storage, and the tokens your agents actually use.")
             ))
           ))
           (el "div" (list (attr :class "three reveal")) (list
@@ -448,10 +448,10 @@
                 (txt "01")
               ))
               (el "h3" nil (list
-                (txt "Workspace")
+                (txt "Desktops")
               ))
               (el "p" nil (list
-                (txt "One shared operating surface: apps, files, memory, routines, approvals, and the agents that connect them.")
+                (txt "A Personal desk and a shared Work desk. Same account, separate files, apps, and people.")
               ))
             ))
             (el "article" (list (attr :class "feature")) (list
@@ -462,7 +462,7 @@
                 (txt "People & agents")
               ))
               (el "p" nil (list
-                (txt "Each plan includes a base team. Add humans and agents as the work grows. You can always bring your own model keys.")
+                (txt "Seats are the billing unit. Team includes up to three people; every person gets a Personal desk and shares the Work desk.")
               ))
             ))
             (el "article" (list (attr :class "feature")) (list
@@ -470,10 +470,10 @@
                 (txt "03")
               ))
               (el "h3" nil (list
-                (txt "Compute")
+                (txt "Storage & tokens")
               ))
               (el "p" nil (list
-                (txt "Hosted desktops run in your browser. Always-on runners keep agents and apps alive when you close the tab. Bring your own hardware, or use ours.")
+                (txt "Pooled VFS storage grows by 100 GB. Token usage draws from a shared wallet, with BYO keys when you want them.")
               ))
             ))
           ))
@@ -511,7 +511,7 @@
                 (txt "Can I move from hosted to self-hosted?")
               ))
               (el "p" nil (list
-                (txt "Yes. Export your workspace and follow the self-hosting guide. The open-source install does not require a license key.")
+                (txt "Yes. Export your desktop and follow the self-hosting guide. The open-source install does not require a license key.")
               ))
             ))
             (el "details" nil (list
@@ -519,7 +519,7 @@
                 (txt "What counts as an agent?")
               ))
               (el "p" nil (list
-                (txt "An agent is a persistent worker with a job, memory, permissions, and a place in the workspace. You can create, pause, and delete them at any time.")
+                (txt "An agent is a persistent worker with a job, memory, permissions, and a place on a desktop. You can create, pause, and delete them at any time.")
               ))
             ))
             (el "details" nil (list
