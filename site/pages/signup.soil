@@ -14,10 +14,10 @@
             (txt "Start free")
           ))
           (el "h1" nil (list
-            (txt "Start with what you have.")
+            (txt "Open your hosted desktop.")
           ))
           (el "p" (list (attr :class "lede")) (list
-            (txt "The open-source project is ready now. Hosted desktops are opening in phases, with Stripe billing and magic-link sign-in rolling out to the first teams.")
+            (txt "Start a 7-day hosted trial at m.fpl.dev. Add a card, open your desktop, and keep the self-hosted path free forever.")
           ))
         ))
       ))
@@ -44,15 +44,15 @@
           ))
           (el "article" (list (attr :class "panel")) (list
             (el "p" (list (attr :class "eyebrow")) (list
-              (txt "Hosted early access")
+              (txt "Hosted desktop")
             ))
             (el "h2" nil (list
-              (txt "We run the pager.")
+              (txt "We run the desktop.")
             ))
             (el "p" nil (list
-              (txt "Join the first hosted teams. We will provision your desktop at m.fpl.dev, help connect the important tools, and set up billing when you are ready to keep it.")
+              (txt "Start with one workspace and a real desktop at m.fpl.dev. Your card starts the trial; cancel from the billing portal at any time.")
             ))
-            (el "form" (list (attr :action "mailto:hello@fpl.dev?subject=Mycelium%20hosted%20early%20access") (attr :method "post") (attr :enctype "text/plain") (attr :style "margin-top:18px")) (list
+            (el "form" (list (attr :id "hosted-signup") (attr :style "margin-top:18px") (attr :novalidate #t)) (list
               (el "div" (list (attr :class "field")) (list
                 (el "label" (list (attr :for "signup-email")) (list
                   (txt "Work email")
@@ -60,19 +60,24 @@
                 (el "input" (list (attr :id "signup-email") (attr :name "email") (attr :type "email") (attr :autocomplete "email") (attr :placeholder "you@company.com") (attr :required #t)) nil)
               ))
               (el "div" (list (attr :class "field")) (list
-                (el "label" (list (attr :for "signup-company")) (list
-                  (txt "Company or team")
+                (el "label" (list (attr :for "signup-plan")) (list
+                  (txt "Plan")
                 ))
-                (el "input" (list (attr :id "signup-company") (attr :name "company") (attr :type "text") (attr :placeholder "Northstar Studio")) nil)
+                (el "select" (list (attr :id "signup-plan") (attr :name "plan") (attr :style "width:100%;padding:12px;border:1px solid var(--line);background:var(--bg);color:var(--text)")) (list
+                  (el "option" (list (attr :value "starter")) (list (txt "Starter · $15/mo")))
+                  (el "option" (list (attr :value "team")) (list (txt "Team · $49/mo")))
+                  (el "option" (list (attr :value "business")) (list (txt "Business · $99/mo")))
+                ))
               ))
               (el "div" (list (attr :class "auth-actions")) (list
                 (el "button" (list (attr :class "btn primary") (attr :type "submit")) (list
-                  (txt "Request early access ")
+                  (txt "Start 7-day trial ")
                   (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
                     (txt "→")
                   ))
                 ))
               ))
+              (el "p" (list (attr :id "signup-status") (attr :class "auth-small") (attr :role "status") (attr :aria-live "polite")) nil)
             ))
             (el "p" (list (attr :class "auth-small")) (list
               (txt "Prefer to talk first? ")
@@ -92,10 +97,10 @@
                 (txt "01")
               ))
               (el "h3" nil (list
-                (txt "Passkeys, not passwords")
+                (txt "Magic links, not passwords")
               ))
               (el "p" nil (list
-                (txt "Sign in with the device you already trust. Magic links handle recovery and new devices.")
+                (txt "Sign in from a one-time email link. Passkeys arrive after the first hosted cohort.")
               ))
             ))
             (el "article" (list (attr :class "feature")) (list

@@ -18,7 +18,7 @@
               (txt "Welcome back to the operating picture.")
             ))
             (el "p" nil (list
-              (txt "Passkeys are the fast path. Magic links are the recovery path. Your workspace stays yours.")
+              (txt "Magic links are the fast path. Passkeys follow. Your desktop stays yours.")
             ))
           ))
           (el "p" (list (attr :class "mono") (attr :style "font-size:10px;color:rgba(255,255,255,.42)")) (list
@@ -31,12 +31,12 @@
               (txt "Sign in")
             ))
             (el "h1" nil (list
-              (txt "Open your workspace.")
+              (txt "Open your desktop.")
             ))
             (el "p" (list (attr :class "lede")) (list
               (txt "Hosted desktops are opening in phases. If your desktop is ready, use the sign-in link we emailed you.")
             ))
-            (el "form" (list (attr :action "mailto:hello@fpl.dev?subject=Mycelium%20workspace%20access") (attr :method "post") (attr :enctype "text/plain")) (list
+            (el "form" (list (attr :id "magic-login") (attr :novalidate #t)) (list
               (el "div" (list (attr :class "field")) (list
                 (el "label" (list (attr :for "login-email")) (list
                   (txt "Work email")
@@ -45,7 +45,7 @@
               ))
               (el "div" (list (attr :class "auth-actions")) (list
                 (el "button" (list (attr :class "btn primary") (attr :type "submit")) (list
-                  (txt "Request an access link ")
+                  (txt "Email me a sign-in link ")
                   (el "span" (list (attr :class "arrow") (attr :aria-hidden "true")) (list
                     (txt "→")
                   ))
@@ -54,6 +54,7 @@
                   (txt "Self-host instead")
                 ))
               ))
+              (el "p" (list (attr :id "login-status") (attr :class "auth-small") (attr :role "status") (attr :aria-live "polite")) nil)
             ))
             (el "div" (list (attr :class "passkey-note") (attr :style "margin-top:18px")) (list
               (el "span" (list (attr :aria-hidden "true")) (list

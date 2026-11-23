@@ -442,3 +442,6 @@ table.plan-table { width: 100%; border-collapse: collapse; min-width: 760px; fon
   .plan .price strong { font-size: 48px; }
   .page-hero h1 { font-size: clamp(44px, 12vw, 64px); }
 }
+
+[data-tone="error"] { color: var(--danger, #ff5970) !important; }
+button:disabled { opacity: .55; cursor: wait; }
